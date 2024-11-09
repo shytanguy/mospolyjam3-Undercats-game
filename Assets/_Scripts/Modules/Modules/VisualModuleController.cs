@@ -1,16 +1,13 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class CollisionModuleController :MonoBehaviour
+using System;
+public class VisualModuleController : MonoBehaviour
 {
-    public static CollisionModuleController instance;
-
+    public static VisualModuleController instance;
     public static event Action OnDeactivated;
 
     public static event Action OnActivated;
-
     private void Awake()
     {
         if (instance == null)
@@ -22,11 +19,11 @@ public class CollisionModuleController :MonoBehaviour
             Destroy(this);
         }
     }
-    public  void TurnOnCollision()
+    public  void TurnOnGraphics()
     {
         OnActivated?.Invoke();
     }
-    public  void TurnOffCollision()
+    public  void TurnOffGraphics()
     {
         OnDeactivated?.Invoke();
     }
