@@ -36,8 +36,8 @@ public class PlayerDashState : PlayerNormalStateAbstract
     private IEnumerator SwitchStateDelay()
     {
         yield return new WaitForSeconds(_timeInDash);
-
-        _StatesManager.SwitchState(PlayerStatesManager.PlayerStates.idle);
+        if (_StatesManager.GetStateKey() == this.stateKey)
+            _StatesManager.SwitchState(PlayerStatesManager.PlayerStates.idle);
     }
     public override void FixedUpdateState()
     {
