@@ -19,9 +19,12 @@ public class HealthScript : MonoBehaviour
     public event Action<float> OnHealed;     
     public event Action OnDeath;
 
+    private OverlaySpriteScript overlayScript;
     private void Awake()
     {
         _currentHealth = _maxHealth;
+
+        overlayScript = GetComponentInChildren<OverlaySpriteScript>();
     }
 
     public void TakeDamage(float damage)
@@ -31,6 +34,9 @@ public class HealthScript : MonoBehaviour
         _currentHealth -= damage;
 
         OnDamageTaken?.Invoke(_currentHealth);
+
+        if (overlayScript!=null)
+        overlayScript.OverlayColorRed();
 
         if (_currentHealth <= 0)
         {
@@ -48,6 +54,9 @@ public class HealthScript : MonoBehaviour
         if (_currentHealth <= 0) return;
 
         _currentHealth += healAmount;
+
+        if (overlayScript != null)
+            overlayScript.OverlayColorGreen();
 
         _currentHealth = Mathf.Clamp(_currentHealth, 0, _maxHealth);
 

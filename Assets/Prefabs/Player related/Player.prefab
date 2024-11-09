@@ -259,7 +259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: 3dc0ed4b90d8b25419165fcba6b98110, type: 3}
-  m_NotificationBehavior: 0
+  m_NotificationBehavior: 3
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -511,6 +511,7 @@ GameObject:
   - component: {fileID: 8012891395326935700}
   - component: {fileID: 4806668999316644475}
   - component: {fileID: 212856315209170648}
+  - component: {fileID: 15810697747021930}
   m_Layer: 3
   m_Name: overlay
   m_TagString: Untagged
@@ -655,3 +656,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _fadeDuration: 0.5
   _originalSprite: {fileID: 4428430771598037754}
+--- !u!210 &15810697747021930
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8355220769099214019}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 2
+  m_SortAtRoot: 0

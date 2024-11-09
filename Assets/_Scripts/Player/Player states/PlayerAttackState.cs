@@ -87,6 +87,7 @@ public  class PlayerAttackState : PlayerAbstractState
             if(collider.TryGetComponent<HitBoxScript>(out hitbox))
             {
                 hitbox.Reflect(GetComponent<FactionScript>().userFaction);
+                _componentsManager.overlayScript.OverlayColorWhite();
             }
             HealthScript hp;
             if (collider.TryGetComponent<HealthScript>(out hp))

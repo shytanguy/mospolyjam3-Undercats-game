@@ -18,6 +18,7 @@ public class CollisionModule : MonoBehaviour
     private void TurnOff()
     {
         _collider.enabled = false;
+       
     }
     private void TurnOn()
     {

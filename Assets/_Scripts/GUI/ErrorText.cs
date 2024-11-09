@@ -14,7 +14,7 @@ public class ErrorText : MonoBehaviour
     {
         _errorText = GetComponent<TextMeshProUGUI>();
     }
-    private void SetText(string text)
+    public void SetText(string text)
     {
         StartCoroutine(TextAnimation(text));
     }
@@ -29,14 +29,36 @@ public class ErrorText : MonoBehaviour
             _errorText.text = ShuffleString(text);
 
             
-            elapsedTime += Time.deltaTime;
+            elapsedTime += 0.03f;
 
           
-            yield return null;
+            yield return new WaitForSeconds(0.03f);
         }
 
        
         _errorText.text = text;
+        StartCoroutine(TextAnimationOff());
+    }
+    private IEnumerator TextAnimationOff()
+    {
+        yield return new WaitForSeconds(1f);
+        float elapsedTime = 0f;
+
+        while (elapsedTime < _timeAnimating)
+        {
+            if (_errorText.text.Length>0)
+            _errorText.text= _errorText.text.Remove(_errorText.text.Length-1);
+            _errorText.text = ShuffleString(_errorText.text);
+
+
+            elapsedTime += 0.03f;
+
+
+            yield return new WaitForSeconds(0.03f);
+        }
+
+
+        _errorText.text = "";
     }
 
 

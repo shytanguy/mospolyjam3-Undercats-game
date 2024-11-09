@@ -29,5 +29,6 @@ public class CollisionModuleController :MonoBehaviour
     public  void TurnOffCollision()
     {
         OnDeactivated?.Invoke();
+        FindFirstObjectByType<ErrorText>().SetText("ERROR COLLISION MODULE");
     }
 }
