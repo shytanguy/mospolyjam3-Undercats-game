@@ -7,9 +7,12 @@ public class OverlaySpriteScript : MonoBehaviour
     private SpriteRenderer _overlay;
 
     [SerializeField] private float _fadeDuration=0.5f;
+    [SerializeField] private SpriteRenderer _originalSprite;
+    private SpriteMask _mask;
     private void Awake()
     {
         _overlay = GetComponent<SpriteRenderer>();
+        _mask = GetComponent<SpriteMask>();
     }
 
     public void OverlayColorWhite()
@@ -35,6 +38,10 @@ public class OverlaySpriteScript : MonoBehaviour
         _overlay.color = Color.green;
 
         StartCoroutine(MakeTransparent());
+    }
+    private void Update()
+    {
+        _mask.sprite = _originalSprite.sprite;
     }
     private IEnumerator MakeTransparent()
     {
