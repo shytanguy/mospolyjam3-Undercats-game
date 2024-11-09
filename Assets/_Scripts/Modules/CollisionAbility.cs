@@ -8,12 +8,12 @@ public class CollisionAbility : AbilityAbstract
     public override void TurnOffAbility()
     {
         base.TurnOffAbility();
-        CollisionModuleController.instance.TurnOn();
+        CollisionModuleController.instance.TurnOnCollision();
     }
 
     public override void TurnOnAbility()
     {
         base.TurnOnAbility();
-        CollisionModuleController.instance.TurnOff();
+        CollisionModuleController.instance.TurnOffCollision();
     }
 }
