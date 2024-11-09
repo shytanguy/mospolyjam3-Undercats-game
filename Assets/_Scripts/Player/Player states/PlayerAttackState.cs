@@ -18,7 +18,7 @@ public  class PlayerAttackState : PlayerAbstractState
 
     [SerializeField] protected Vector2 _hitBoxDimensions;
 
-    [SerializeField] private Vector3 _hitBoxOffset;
+    [SerializeField] private Vector2 _hitBoxOffset;
 
     [SerializeField] private bool _drawGizmos;
 
@@ -67,7 +67,16 @@ public  class PlayerAttackState : PlayerAbstractState
     }
     private void Attack()
     {
-     Collider2D[] Hit=   Physics2D.OverlapBoxAll(transform.position + _hitBoxOffset, _hitBoxDimensions, 0, _hitBoxLayerMask);
+        Vector3 offset;
+        if (transform.eulerAngles.y == 0)
+        {
+             offset = _hitBoxOffset;
+        }
+        else
+        {
+            offset = new Vector3(-_hitBoxOffset.x, _hitBoxOffset.y);
+        }
+     Collider2D[] Hit=   Physics2D.OverlapBoxAll(transform.position + offset, _hitBoxDimensions, 0, _hitBoxLayerMask);
         foreach(var collider in Hit)
         {
             HitBoxScript hitbox;
@@ -90,8 +99,17 @@ public  class PlayerAttackState : PlayerAbstractState
         if (!_drawGizmos) return;
 
         Gizmos.color = Color.red;
-
-        Gizmos.DrawCube(transform.position + _hitBoxOffset, _hitBoxDimensions);
+        Vector3 offset;
+        if (transform.eulerAngles.y == 0)
+        {
+            offset = _hitBoxOffset;
+        }
+        else
+        {
+            offset = new Vector3(-_hitBoxOffset.x, _hitBoxOffset.y);
+        }
+      
+        Gizmos.DrawCube(transform.position + offset, _hitBoxDimensions);
     }
     protected IEnumerator HitBoxSpawnDelay()
     {
