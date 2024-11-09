@@ -20,7 +20,15 @@ public abstract class PlayerNormalStateAbstract : PlayerAbstractState
     private void OnAttackInput(InputAction.CallbackContext context)
     {
         Vector2 direction = _componentsManager.playerInput.actions["Move"].ReadValue<Vector2>();
+        if (direction.x > 0)
+        {
+            transform.rotation = Quaternion.identity;
 
+        }
+        else if (direction.x < 0)
+        {
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
         switch (direction.y)
         {
             case 0: _StatesManager.SwitchState(PlayerStatesManager.PlayerStates.attackMiddle); break;
