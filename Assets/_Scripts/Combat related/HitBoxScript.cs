@@ -11,9 +11,9 @@ public class HitBoxScript : MonoBehaviour
 
     [HideInInspector] public bool _canReflect { get; private set; } = true;
 
-    private bool _Reflected = false;
+  [HideInInspector]  public bool Reflected { get; private set; } = false;
 
-    public event Action OnReflect;
+    public event Action<FactionScript.Faction> OnReflect;
 
     public event Action OnDamage;
 
@@ -40,9 +40,9 @@ public class HitBoxScript : MonoBehaviour
         if (!_canReflect) return;
         else
         {
-            _Reflected = true;
+            Reflected = true;
            
-            OnReflect?.Invoke();
+            OnReflect?.Invoke(faction);
         }
     }
     private void Damage()
