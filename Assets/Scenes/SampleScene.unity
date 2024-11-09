@@ -155,7 +155,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 463454649}
         m_TargetAssemblyTypeName: VisualModuleController, Assembly-CSharp
-        m_MethodName: TurnOffGraphics
+        m_MethodName: TurnOnGraphics
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

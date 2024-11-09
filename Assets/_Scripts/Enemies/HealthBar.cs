@@ -15,7 +15,7 @@ public class HealthBar : MonoBehaviour
         _HealthBarVisual = transform.GetChild(0);
         _initialSizeX = _HealthBarVisual.localScale.x;
 
-        Debug.Log($"{_healthScript._maxHealth * _initialSizeX}");
+    
     }
     private void OnEnable()
     {
