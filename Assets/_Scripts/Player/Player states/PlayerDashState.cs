@@ -12,7 +12,15 @@ public class PlayerDashState : PlayerNormalStateAbstract
         base.EnterState();
 
         Vector2 direction = _componentsManager.playerInput.actions["Move"].ReadValue<Vector2>();
+        if (direction.x > 0)
+        {
+            transform.rotation = Quaternion.identity;
 
+        }
+        else if (direction.x < 0)
+        {
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
         if (direction != Vector2.zero)
         {
             _componentsManager.playerRigidbody.velocity = _dashSpeed * direction;

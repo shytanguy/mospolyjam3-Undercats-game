@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Windows;
 
 public class PlayerWalkState : PlayerNormalStateAbstract
 {
@@ -21,7 +22,15 @@ public class PlayerWalkState : PlayerNormalStateAbstract
     {
         Vector2 direction =_speed* _componentsManager.playerInput.actions["Move"].ReadValue<Vector2>();
 
-        
+        if (direction.x > 0)
+        {
+            transform.rotation = Quaternion.identity;
+
+        }
+        else if (direction.x < 0)
+        {
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
         _componentsManager.playerRigidbody.velocity = direction;
     }
     private void CheckState()
