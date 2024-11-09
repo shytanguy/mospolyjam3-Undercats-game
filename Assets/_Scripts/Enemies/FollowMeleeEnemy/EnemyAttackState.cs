@@ -10,6 +10,7 @@ public class EnemyAttackState : EnemyAbstractState
     [SerializeField] private float _animationTime = 1f;
     public override void EnterState()
     {
+        _enemyComponents.EnemyRigidbody.velocity = Vector2.zero;
         Vector3 offset;
         if (transform.rotation.eulerAngles.y == 0)
         {
@@ -20,6 +21,7 @@ public class EnemyAttackState : EnemyAbstractState
             offset = new Vector3(-_spawnHitBoxOffset.x, _spawnHitBoxOffset.y);
         }
         Instantiate(_hitBoxPrefab, transform.position + offset, Quaternion.identity);
+        StartCoroutine(SwitchStateDelay());
     }
 
     private IEnumerator SwitchStateDelay()

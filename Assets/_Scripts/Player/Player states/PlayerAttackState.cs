@@ -25,6 +25,8 @@ public  class PlayerAttackState : PlayerAbstractState
     [SerializeField] private LayerMask _hitBoxLayerMask;
 
     [SerializeField] private float _knockbackForce = 5f;
+
+    [SerializeField] private Vector2 _knockbackDirection;
     public override void EnterState()
     {
         _canInput = false;
@@ -90,7 +92,12 @@ public  class PlayerAttackState : PlayerAbstractState
             if (collider.TryGetComponent<HealthScript>(out hp))
             {
                 hp.TakeDamage(_damage);
-                collider.GetComponent<Rigidbody2D>().AddForce(_knockbackForce * (collider.transform.position - transform.position).normalized, ForceMode2D.Impulse);
+                Vector2 knockback=_knockbackDirection;
+                if (transform.rotation.eulerAngles.y != 0)
+                {
+                    knockback = new Vector2(-knockback.x, knockback.y);
+                }
+                collider.GetComponent<Rigidbody2D>().AddForce(_knockbackForce * _knockbackDirection, ForceMode2D.Impulse);
             }
             
         }

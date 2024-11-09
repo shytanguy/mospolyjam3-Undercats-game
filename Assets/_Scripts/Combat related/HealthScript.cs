@@ -6,7 +6,7 @@ using UnityEngine;
 public class HealthScript : MonoBehaviour
 {
 
-    [SerializeField] private float _maxHealth = 100;
+    [field: SerializeField] public float _maxHealth { get; private set; } = 100;
     [HideInInspector] public float _currentHealth { get; private set; }
 
     [Tooltip("Если включено, то после получения урона, у персонажа будет какое-то время с неуязвимостью")]

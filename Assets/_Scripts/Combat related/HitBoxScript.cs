@@ -46,6 +46,10 @@ public class HitBoxScript : MonoBehaviour
             OnReflect?.Invoke(faction);
         }
     }
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(transform.position, _hitRadius);
+    }
     private void Damage()
     {
         
