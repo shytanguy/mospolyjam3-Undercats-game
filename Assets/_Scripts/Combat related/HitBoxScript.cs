@@ -8,6 +8,7 @@ public class HitBoxScript : MonoBehaviour
     [SerializeField] private int _framesBeforeDamage=5;
 
     [SerializeField] private float _damage = 5f;
+    [SerializeField] private float _knockBack = 5f;
 
     [HideInInspector] public bool _canReflect { get; private set; } = true;
 
@@ -53,6 +54,7 @@ public class HitBoxScript : MonoBehaviour
         foreach(var collider in hitColliders)
         {
             collider.GetComponent<HealthScript>().TakeDamage(_damage);
+            collider.GetComponent<Rigidbody2D>().AddForce(_knockBack * (collider.transform.position - transform.position).normalized, ForceMode2D.Impulse);
         }
         OnDamage?.Invoke();
     }

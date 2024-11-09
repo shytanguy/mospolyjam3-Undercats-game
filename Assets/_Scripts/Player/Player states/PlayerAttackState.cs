@@ -23,6 +23,8 @@ public  class PlayerAttackState : PlayerAbstractState
     [SerializeField] private bool _drawGizmos;
 
     [SerializeField] private LayerMask _hitBoxLayerMask;
+
+    [SerializeField] private float _knockbackForce = 5f;
     public override void EnterState()
     {
         _canInput = false;
@@ -88,6 +90,7 @@ public  class PlayerAttackState : PlayerAbstractState
             if (collider.TryGetComponent<HealthScript>(out hp))
             {
                 hp.TakeDamage(_damage);
+                collider.GetComponent<Rigidbody2D>().AddForce(_knockbackForce * (collider.transform.position - transform.position).normalized, ForceMode2D.Impulse);
             }
             
         }

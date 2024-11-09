@@ -435,7 +435,7 @@ GameObject:
   - component: {fileID: 843879221}
   - component: {fileID: 843879222}
   - component: {fileID: 843879223}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -634,7 +634,7 @@ GameObject:
   - component: {fileID: 1223033802}
   - component: {fileID: 1223033811}
   - component: {fileID: 1223033810}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -779,12 +779,13 @@ MonoBehaviour:
   _TimeBeforeInput: 0.7
   _HitBoxSpawnDelay: 0.2
   _damage: 5
-  _hitBoxDimensions: {x: 1, y: 0.5}
-  _hitBoxOffset: {x: 0, y: -0.8}
+  _hitBoxDimensions: {x: 1.17, y: 0.94}
+  _hitBoxOffset: {x: 0.44, y: -0.41}
   _drawGizmos: 0
   _hitBoxLayerMask:
     serializedVersion: 2
     m_Bits: 192
+  _knockbackForce: 5
 --- !u!114 &1223033803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -804,12 +805,13 @@ MonoBehaviour:
   _TimeBeforeInput: 0.7
   _HitBoxSpawnDelay: 0.2
   _damage: 5
-  _hitBoxDimensions: {x: 1, y: 0.5}
-  _hitBoxOffset: {x: 0, y: 0.8}
+  _hitBoxDimensions: {x: 0.99, y: 1}
+  _hitBoxOffset: {x: 0.26, y: 0.4}
   _drawGizmos: 0
   _hitBoxLayerMask:
     serializedVersion: 2
     m_Bits: 192
+  _knockbackForce: 5
 --- !u!114 &1223033804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -831,10 +833,11 @@ MonoBehaviour:
   _damage: 5
   _hitBoxDimensions: {x: 0.6, y: 1.5}
   _hitBoxOffset: {x: 0.5, y: 0}
-  _drawGizmos: 1
+  _drawGizmos: 0
   _hitBoxLayerMask:
     serializedVersion: 2
     m_Bits: 192
+  _knockbackForce: 5
 --- !u!114 &1223033805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1210,7 +1213,7 @@ GameObject:
   - component: {fileID: 1715339077}
   - component: {fileID: 1715339076}
   - component: {fileID: 1715339075}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: overlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
