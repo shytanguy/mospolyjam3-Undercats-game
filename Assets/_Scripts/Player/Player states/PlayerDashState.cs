@@ -32,7 +32,11 @@ public class PlayerDashState : PlayerNormalStateAbstract
 
         StartCoroutine(SwitchStateDelay());
     }
-
+  
+    public override void ExitState()
+    {
+        base.ExitState();
+    }
     private IEnumerator SwitchStateDelay()
     {
         yield return new WaitForSeconds(_timeInDash);

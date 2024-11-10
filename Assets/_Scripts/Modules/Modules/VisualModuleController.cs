@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-public class VisualModuleController : MonoBehaviour
+public class VisualModuleController : ModuleControllerAbstract
 {
     public static VisualModuleController instance;
     public static event Action OnDeactivated;
@@ -22,10 +22,11 @@ public class VisualModuleController : MonoBehaviour
     public  void TurnOnGraphics()
     {
         OnActivated?.Invoke();
+        SendMessage(_fixedMessage);
     }
     public  void TurnOffGraphics()
     {
         OnDeactivated?.Invoke();
-        FindFirstObjectByType<ErrorText>().SetText("ERROR VISUAL MODULE");
+        SendMessage(_brokenMessage);
     }
 }

@@ -18,12 +18,11 @@ public class EnemyAbilityHandler : MonoBehaviour
     {
         if (ability != null && !ability.useOnceOnSpawn && !abilityUsedOnce)
         {
-                if (!ability.AbilityOn)
-                {
+               
                     ability.TurnOnAbility();
-                    abilityUsedOnce = true;
+                    
                     StartCoroutine(AbilityCooldownCoroutine());
-                }
+                
         }
     }
 

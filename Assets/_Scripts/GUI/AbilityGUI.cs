@@ -45,49 +45,10 @@ public class AbilityGUI : MonoBehaviour
 
     private void AnimateAbilitySwitch(AbilityAbstract newAbility)
     {
-        StopAllCoroutines();
-
-        StartCoroutine(SwitchAnimation(newAbility));
-    }
-
-    private IEnumerator SwitchAnimation(AbilityAbstract newAbility)
-    {
-
-        Sprite initialCurrentIcon = _currentAbilityIcon.sprite;
-
-        string initialCurrentName = _currentAbilityName.text;
-
-        Sprite initialNextIcon = _nextAbilityIcon.sprite;
-
-        
-        _nextAbilityIcon.sprite = initialCurrentIcon;
-
-        _currentAbilityName.text = newAbility.Name;
-
-        _currentAbilityIcon.sprite = newAbility.Icon;
-
-        float elapsedTime = 0;
-        while (elapsedTime < animationDuration)
-        {
-            elapsedTime += Time.deltaTime;
-
-            float t = elapsedTime / animationDuration;
-
-            _currentAbilityRect.anchoredPosition = Vector2.Lerp(_currentAbilityStartPosition, _nextAbilityStartPosition, t);
-
-            _nextAbilityRect.anchoredPosition = Vector2.Lerp(_nextAbilityStartPosition, _currentAbilityStartPosition, t);
-
-            yield return null;
-        }
-
-     
-        _currentAbilityRect.anchoredPosition = _currentAbilityStartPosition;
-
-        _nextAbilityRect.anchoredPosition = _nextAbilityStartPosition;
-
-
         UpdateAbilityDisplay(newAbility);
     }
+
+    
 
     private void UpdateAbilityDisplay(AbilityAbstract newAbility)
     {

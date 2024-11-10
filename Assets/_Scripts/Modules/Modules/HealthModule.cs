@@ -31,11 +31,11 @@ public class HealthModule : MonoBehaviour
     {
         StopAllCoroutines();
     }
-    private void TurnOff(float heal,float cooldown)
+    private void TurnOff(float heal,float cooldown, GameObject prefabEffect)
     {
-        StartCoroutine(HealRepeatedly(heal, cooldown));
+        StartCoroutine(HealRepeatedly(heal, cooldown,prefabEffect));
     }
-    private IEnumerator HealRepeatedly(float healPercent,float cooldown)
+    private IEnumerator HealRepeatedly(float healPercent,float cooldown, GameObject prefabEffect)
     {
         while (true)
         {
@@ -45,6 +45,10 @@ public class HealthModule : MonoBehaviour
             if (_healSound != null)
             {
                 AudioManager.audioManager.PlaySound(_healSound);
+            }
+            if (prefabEffect != null)
+            {
+                Instantiate(prefabEffect, transform.position, Quaternion.identity);
             }
         }
     }

@@ -42,6 +42,7 @@ public abstract class PlayerNormalStateAbstract : PlayerAbstractState
     }
     private void OnSpecialInput(InputAction.CallbackContext context)
     {
+ 
         _StatesManager.SwitchState(PlayerStatesManager.PlayerStates.special);
     }
 }

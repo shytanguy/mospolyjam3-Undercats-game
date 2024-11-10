@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,8 @@ public class EnemyDeathScript : MonoBehaviour
 
     [SerializeField] private AudioClip _deathClip;
     [SerializeField] private GameObject _deathParticle;
+
+   
     private void Awake()
     {
         _healthScript = GetComponent<HealthScript>();

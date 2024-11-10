@@ -1,22 +1,22 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
-public class HealthModuleController : ModuleControllerAbstract
+
+public class TemperatureModuleController : ModuleControllerAbstract
 {
-    public static HealthModuleController instance;
+    public static TemperatureModuleController instance;
 
     public static event Action<float, float, GameObject> OnDeactivated;
 
     [SerializeField] private GameObject _effect;
 
     public static event Action OnActivated;
+    public static bool TurnedOn=false;
 
-    [SerializeField] private float _healPercent=0.05f;
+    [SerializeField] private float _burnPercent = 0.05f;
 
     [SerializeField] private float _cooldown = 1f;
-
-    public static bool TurnedOn=false;
     private void Awake()
     {
         if (instance == null)
@@ -28,18 +28,18 @@ public class HealthModuleController : ModuleControllerAbstract
             Destroy(this);
         }
     }
-    public void TurnOnHeal()
-    {
-        TurnedOn = true;
-        OnDeactivated?.Invoke(_healPercent, _cooldown, _effect);
-        SendMessage(_brokenMessage);
-
-    }
-    public void TurnOffHeal()
+    public void TurnOffTemperature()
     {
         TurnedOn = false;
-     
         OnActivated?.Invoke();
+
         SendMessage(_fixedMessage);
+    }
+    public void TurnOnTemperature()
+    {
+       
+        TurnedOn = true;
+        OnDeactivated?.Invoke(_burnPercent, _cooldown, _effect);
+        SendMessage(_brokenMessage);
     }
 }

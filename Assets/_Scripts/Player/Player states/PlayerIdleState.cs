@@ -14,7 +14,7 @@ public class PlayerIdleState :PlayerNormalStateAbstract
 
     public override void ExitState()
     {
-        base.EnterState();
+        base.ExitState();
         //  _componentsManager.playerInput.actions["Attack"].performed -= OnAttackInput;
     }
 

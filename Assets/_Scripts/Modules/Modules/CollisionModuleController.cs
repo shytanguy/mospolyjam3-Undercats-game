@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CollisionModuleController :MonoBehaviour
+public class CollisionModuleController :ModuleControllerAbstract
 {
     public static CollisionModuleController instance;
 
@@ -11,6 +11,7 @@ public class CollisionModuleController :MonoBehaviour
 
     public static event Action OnActivated;
 
+    public static bool TurnedOn=true;
     private void Awake()
     {
         if (instance == null)
@@ -24,11 +25,14 @@ public class CollisionModuleController :MonoBehaviour
     }
     public  void TurnOnCollision()
     {
+        TurnedOn = true;
         OnActivated?.Invoke();
+        SendMessage(_fixedMessage);
     }
     public  void TurnOffCollision()
     {
+        TurnedOn = false;
         OnDeactivated?.Invoke();
-        FindFirstObjectByType<ErrorText>().SetText("ERROR COLLISION MODULE");
+        SendMessage(_brokenMessage);
     }
 }

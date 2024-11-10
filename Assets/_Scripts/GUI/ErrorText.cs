@@ -9,13 +9,29 @@ public class ErrorText : MonoBehaviour
 
     [SerializeField]  private float _timeAnimating;
 
-
+    [SerializeField] private ModuleControllerAbstract[] modules;
     private void Awake()
     {
         _errorText = GetComponent<TextMeshProUGUI>();
     }
+
+    private void OnEnable()
+    {
+        foreach(var module in modules)
+        {
+            module.OnActivationMessage += SetText;
+        }
+    }
+    private void OnDisable()
+    {
+        foreach (var module in modules)
+        {
+            module.OnActivationMessage -= SetText;
+        }
+    }
     public void SetText(string text)
     {
+        StopAllCoroutines();
         StartCoroutine(TextAnimation(text));
     }
 

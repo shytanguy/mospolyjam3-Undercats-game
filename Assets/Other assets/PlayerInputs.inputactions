@@ -51,7 +51,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "SwitchSpecial",
+                    "name": "Switch Ability",
                     "type": "Button",
                     "id": "7c9f30a8-bfd8-41a7-bb4a-b87ab4d24f34",
                     "expectedControlType": "Button",
@@ -176,7 +176,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "SwitchSpecial",
+                    "action": "Switch Ability",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
