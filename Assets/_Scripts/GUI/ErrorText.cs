@@ -22,13 +22,13 @@ public class ErrorText : MonoBehaviour
     private IEnumerator TextAnimation(string text)
     {
         float elapsedTime = 0f;
-
+        int i = 1;
         while (elapsedTime < _timeAnimating)
         {
-            
-            _errorText.text = ShuffleString(text);
-
-            
+           
+            _errorText.text = ShuffleString(text).Remove(i,text.Length-i);
+            if (i < text.Length)
+            i++;
             elapsedTime += 0.03f;
 
           

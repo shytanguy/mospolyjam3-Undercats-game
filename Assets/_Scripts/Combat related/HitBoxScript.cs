@@ -24,25 +24,43 @@ public class HitBoxScript : MonoBehaviour
 
     [SerializeField] private float _hitRadius;
 
-    
+    private FactionScript _faction;
+
+    private void Awake()
+    {
+        _faction = GetComponent<FactionScript>();
+    }
+    private void OnEnable()
+    {
+        OnReflect += ChangeFaction;
+    }
+    private void OnDisable()
+    {
+        OnReflect -= ChangeFaction;
+    }
     private IEnumerator DamageDelay()
     {
         for (int i = 1; i <= _framesBeforeDamage; i++)
         {
-            yield return new WaitForEndOfFrame();
+            yield return null;
         }
+        if (Reflected) yield break;
         _canReflect = false;
 
         Damage();
     }
-
-    public void Reflect(FactionScript.Faction faction)
+   
+    private void ChangeFaction(FactionScript.Faction faction)
     {
-        if (!_canReflect) return;
+        _faction.ChangeFaction(faction);
+    }
+    public bool Reflect(FactionScript.Faction faction)
+    {
+        if (!_canReflect) return false;
         else
         {
             Reflected = true;
-           
+            return true;
             OnReflect?.Invoke(faction);
         }
     }
@@ -57,6 +75,7 @@ public class HitBoxScript : MonoBehaviour
 
         foreach(var collider in hitColliders)
         {
+            if (collider.GetComponent<FactionScript>().userFaction == _faction.userFaction) continue;
             collider.GetComponent<HealthScript>().TakeDamage(_damage);
             collider.GetComponent<Rigidbody2D>().AddForce(_knockBack * (collider.transform.position - transform.position).normalized, ForceMode2D.Impulse);
         }

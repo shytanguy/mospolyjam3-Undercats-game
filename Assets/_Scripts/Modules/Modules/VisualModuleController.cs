@@ -26,5 +26,6 @@ public class VisualModuleController : MonoBehaviour
     public  void TurnOffGraphics()
     {
         OnDeactivated?.Invoke();
+        FindFirstObjectByType<ErrorText>().SetText("ERROR VISUAL MODULE");
     }
 }

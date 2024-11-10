@@ -3,12 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 using System.Security.Cryptography;
+using System;
+using Unity.Mathematics;
 
-public class CinemachineShakeController : MonoBehaviour
+public class CinemachineEffectsController : MonoBehaviour
 {
     [SerializeField] private CinemachineBrain _cinemachineBrain;
 
-    public static CinemachineShakeController instance;
+    public static CinemachineEffectsController instance;
+
+
     private void Awake()
     {
         if (instance == null)
@@ -24,7 +28,32 @@ public class CinemachineShakeController : MonoBehaviour
        
         StartCoroutine(ShakeCameraIE(amplitude, frequency, timeShake, perlin));
     }
-  
+  public void ZoomCamera(float time, float percentZoom,float timeInZoom)
+    {
+        CinemachineVirtualCamera camera = _cinemachineBrain.ActiveVirtualCamera.VirtualCameraGameObject.GetComponent<CinemachineVirtualCamera>();
+        StartCoroutine(ZoomCameraForTime(time, percentZoom, camera,timeInZoom));
+    }
+    private IEnumerator ZoomCameraForTime(float timePerZoom, float percent, CinemachineVirtualCamera camera,float timeZoom)
+    {
+        float size = camera.m_Lens.OrthographicSize;
+        float timer = 0;
+        float targetSize = camera.m_Lens.OrthographicSize / percent;
+        while (timer < timePerZoom)
+        {
+            camera.m_Lens.OrthographicSize = math.lerp(size,targetSize,timer/ timePerZoom);
+            timer += Time.deltaTime;
+            yield return null;
+        }
+        yield return new WaitForSecondsRealtime(timeZoom);
+        timer = 0;
+        while (timer < timePerZoom)
+        {
+            camera.m_Lens.OrthographicSize = math.lerp(targetSize, size, timer / timePerZoom);
+            timer += Time.deltaTime;
+            yield return null;
+        }
+        camera.m_Lens.OrthographicSize = size;
+    }
     private IEnumerator ShakeCameraIE(int amplitude, int frequency, float timeShake, CinemachineBasicMultiChannelPerlin perlin)
     {
         

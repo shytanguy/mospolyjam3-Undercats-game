@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 8741478717087912239}
   - component: {fileID: 1312550688745560632}
   - component: {fileID: 8489390252802392967}
+  - component: {fileID: 4965997679000400526}
   m_Layer: 6
   m_Name: Enemy normal
   m_TagString: Untagged
@@ -250,6 +251,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64bb743c0e858134c9df05796f7c837f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4965997679000400526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1264280626853292700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4126dc407e569224ea5463469d459bcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dropItemOnDeathPrefab: {fileID: 0}
+  _deathClip: {fileID: 0}
+  _deathParticle: {fileID: 0}
 --- !u!1 &5863346491934466112
 GameObject:
   m_ObjectHideFlags: 0
@@ -261,6 +277,7 @@ GameObject:
   - component: {fileID: 7999539278297549440}
   - component: {fileID: 4474468502114549126}
   - component: {fileID: 1506749696406660362}
+  - component: {fileID: 57733093376990248}
   m_Layer: 6
   m_Name: sprite
   m_TagString: Untagged
@@ -278,7 +295,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.57574, y: 0.57574, z: 0.57574}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8013357588722271708}
@@ -327,7 +344,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 3300825243217956242, guid: 9d94b5a0e85a4694daefa94d6106d853, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -360,6 +377,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &57733093376990248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5863346491934466112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71722e3430929384e830aaca7a25c417, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _turnOffSprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  _turnOffColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &6473515107587868416
 GameObject:
   m_ObjectHideFlags: 0

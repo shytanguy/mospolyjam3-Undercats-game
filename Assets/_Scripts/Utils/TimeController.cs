@@ -14,17 +14,19 @@ public static class TimeController
         lastCaller = caller;
         Time.timeScale = 0;
     }
-    public static void SetTimeScale( float timescale)
+    public static void SetTimeScale( float timescale, Object caller)
     {
-        Time.timeScale = 0;
         _previousTimeScale = Time.timeScale;
-
+        Time.timeScale = timescale;
+     
+        lastCaller = caller;
     }
+ 
     public static bool ResumeTime(Object caller)
     {
         if (caller == lastCaller)
         {
-            Time.timeScale = _previousTimeScale;
+            Time.timeScale = 1f;
             return true;
         }
         else

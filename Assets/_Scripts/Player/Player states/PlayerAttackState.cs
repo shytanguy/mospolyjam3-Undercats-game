@@ -27,12 +27,22 @@ public  class PlayerAttackState : PlayerAbstractState
     [SerializeField] private float _knockbackForce = 5f;
 
     [SerializeField] private Vector2 _knockbackDirection;
+
+    [SerializeField] private GameObject _counterEffectPrefab;
+
+    [SerializeField] private float _timeZoom=0.6f;
+    [SerializeField] private float _timePerZoom = 0.2f;
+    [SerializeField] private float _zoomPercent = 1.3f;
+
+    private bool _countered=false;
+
+    [SerializeField] private float _counterDamageMultiplier=1.2f;
     public override void EnterState()
     {
         _canInput = false;
 
         StartCoroutine(HitBoxSpawnDelay());
-
+        _componentsManager.playerRigidbody.velocity = Vector2.zero;
         StartCoroutine(InputDelay());
 
         StartCoroutine(SwitchStateDelay());
@@ -86,12 +96,18 @@ public  class PlayerAttackState : PlayerAbstractState
             HitBoxScript hitbox;
             if(collider.TryGetComponent<HitBoxScript>(out hitbox))
             {
-                hitbox.Reflect(GetComponent<FactionScript>().userFaction);
-                _componentsManager.overlayScript.OverlayColorWhite();
+
+                if (hitbox.Reflect(GetComponent<FactionScript>().userFaction))
+                    Counter();
             }
             HealthScript hp;
             if (collider.TryGetComponent<HealthScript>(out hp))
             {
+                if (_countered)
+                {
+                    hp.TakeDamage(_damage * _counterDamageMultiplier);
+                }
+                else
                 hp.TakeDamage(_damage);
                 Vector2 knockback=_knockbackDirection;
                 if (transform.rotation.eulerAngles.y != 0)
@@ -100,11 +116,24 @@ public  class PlayerAttackState : PlayerAbstractState
                 }
                 collider.GetComponent<Rigidbody2D>().AddForce(_knockbackForce * _knockbackDirection, ForceMode2D.Impulse);
             }
-            
+            _countered = false;
         }
       
     }
-
+    private void Counter()
+    {
+        _componentsManager.overlayScript.OverlayColorWhite();
+        Instantiate(_counterEffectPrefab, transform.position, Quaternion.identity);
+        TimeController.SetTimeScale(0.7f, this);
+        CinemachineEffectsController.instance.ZoomCamera(_timePerZoom, _zoomPercent,_timeZoom);
+        _countered = true;
+        StartCoroutine(ResumeTimeCounter());
+    }
+    private IEnumerator ResumeTimeCounter()
+    {
+        yield return new WaitForSecondsRealtime(_timeZoom);
+        TimeController.ResumeTime(this);
+    }
     private void OnDrawGizmosSelected()
     {
         if (!_drawGizmos) return;
