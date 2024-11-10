@@ -10,12 +10,12 @@ public abstract class AbilityAbstract : ScriptableObject
 
     public bool AbilityOn { get; private set; } = false;
 
-
+    [field: SerializeField] public bool useOnceOnSpawn { get; private set; }
+    [field: SerializeField] public float cooldownTime { get; private set; }
     public virtual void TurnOnAbility()
     {
         if (AbilityOn) return;
         AbilityOn = true;
-       
     }
    
     public virtual void TurnOffAbility()
