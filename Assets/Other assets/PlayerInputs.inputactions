@@ -58,6 +58,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Interact",
+                    "type": "Button",
+                    "id": "7392b3e8-7c63-4ce2-a438-173f759a4485",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -130,7 +139,7 @@
                 {
                     "name": "",
                     "id": "c1401aaf-6f69-46fa-a283-82af3b76332f",
-                    "path": "<Keyboard>/e",
+                    "path": "<Keyboard>/r",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -168,6 +177,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "SwitchSpecial",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0beb97de-87f6-4891-8dd7-ee4522c36eb2",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

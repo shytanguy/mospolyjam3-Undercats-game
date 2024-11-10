@@ -37,7 +37,7 @@ public class PlayerAnimationsAndEffects : MonoBehaviour
         _currentKey = NewState;
         switch (NewState)
         {
-     
+           
             
         }
         switch (PreviousState)
@@ -50,7 +50,8 @@ public class PlayerAnimationsAndEffects : MonoBehaviour
         
         switch (NewState)
         {
-          
+            case PlayerStatesManager.PlayerStates.idle: _components.playerAnimator.Play("idle"); break;
+            case PlayerStatesManager.PlayerStates.walk: _components.playerAnimator.Play("walk"); break;
 
         }
        

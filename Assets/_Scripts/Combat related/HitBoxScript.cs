@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class HitBoxScript : MonoBehaviour
 {
-    [SerializeField] private int _framesBeforeDamage=5;
+    [SerializeField] private float _SecondsBeforeDamage=0.5f;
 
     [SerializeField] private float _damage = 5f;
     [SerializeField] private float _knockBack = 5f;
@@ -26,6 +26,7 @@ public class HitBoxScript : MonoBehaviour
 
     private FactionScript _faction;
 
+    [SerializeField] private bool _delayDamage=true;
     private void Awake()
     {
         _faction = GetComponent<FactionScript>();
@@ -40,7 +41,8 @@ public class HitBoxScript : MonoBehaviour
     }
     private IEnumerator DamageDelay()
     {
-        for (int i = 1; i <= _framesBeforeDamage; i++)
+        
+        for (float i = 0; i <= _SecondsBeforeDamage; i+=Time.deltaTime)
         {
             yield return null;
         }
@@ -82,11 +84,18 @@ public class HitBoxScript : MonoBehaviour
         OnDamage?.Invoke();
     }
     private void OnTriggerEnter2D(Collider2D collision)
-    { 
-        if ((_damageLayer.value & (1 << collision.gameObject.layer)) > 0&&_TriggerEntered==false)
+    {
+        if ((_damageLayer.value & (1 << collision.gameObject.layer)) > 0 && _TriggerEntered == false)
         {
             _TriggerEntered = true;
-            StartCoroutine(DamageDelay());
+            if (_delayDamage)
+            {
+                StartCoroutine(DamageDelay());
+            }
+            else
+            {
+                Damage();
+            }
         }
     }
 }

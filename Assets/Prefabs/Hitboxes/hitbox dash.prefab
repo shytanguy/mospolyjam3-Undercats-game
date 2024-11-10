@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4973404294721545455}
   - component: {fileID: 408543460036299306}
   m_Layer: 6
-  m_Name: hitbox normal enemy
+  m_Name: hitbox dash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -93,13 +93,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f82273997b4bc64ea36c82a869f6de6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _framesBeforeDamage: 20
-  _damage: 5
+  _SecondsBeforeDamage: 0
+  _damage: 10
   _knockBack: 5
   _damageLayer:
     serializedVersion: 2
     m_Bits: 8
-  _hitRadius: 0.32
+  _hitRadius: 0.95
 --- !u!114 &4973404294721545455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7b77517f22b55740aa4bd96ea8ddf5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _TimeBeforeDeleted: 0.5
+  _TimeBeforeDeleted: 0.7
   _duration: 1
   _destroyInstantly: 1
 --- !u!114 &408543460036299306
