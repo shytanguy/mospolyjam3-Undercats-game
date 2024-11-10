@@ -93,13 +93,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f82273997b4bc64ea36c82a869f6de6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _framesBeforeDamage: 20
+  _SecondsBeforeDamage: 0.1
   _damage: 5
   _knockBack: 5
   _damageLayer:
     serializedVersion: 2
     m_Bits: 8
   _hitRadius: 0.32
+  _delayDamage: 1
 --- !u!114 &4973404294721545455
 MonoBehaviour:
   m_ObjectHideFlags: 0

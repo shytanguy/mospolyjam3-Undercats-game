@@ -122,6 +122,7 @@ public  class PlayerAttackState : PlayerAbstractState
     }
     private void Counter()
     {
+        if (_countered) return;
         _componentsManager.overlayScript.OverlayColorWhite();
         Instantiate(_counterEffectPrefab, transform.position, Quaternion.identity);
         TimeController.SetTimeScale(0.7f, this);
