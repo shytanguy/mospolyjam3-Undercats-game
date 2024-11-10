@@ -52,6 +52,7 @@ public class PlayerAnimationsAndEffects : MonoBehaviour
         {
             case PlayerStatesManager.PlayerStates.idle: _components.playerAnimator.Play("idle"); break;
             case PlayerStatesManager.PlayerStates.walk: _components.playerAnimator.Play("walk"); break;
+            case PlayerStatesManager.PlayerStates.dash: _components.playerAnimator.Play("dash"); break;
 
         }
        

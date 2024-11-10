@@ -151,6 +151,7 @@ GameObject:
   - component: {fileID: 563511205841383823}
   - component: {fileID: 6974483645890096723}
   - component: {fileID: 5460903999341491356}
+  - component: {fileID: 7363820814214226637}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -532,6 +533,21 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   _GUIGuide: {fileID: 0}
+--- !u!114 &7363820814214226637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5521925753524676496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d56f313af7f58438b9e47b514ad968, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _walkEffect: {fileID: 0}
+  _walkSounds: []
+  _attackSounds: []
 --- !u!1 &8355220769099214019
 GameObject:
   m_ObjectHideFlags: 0
