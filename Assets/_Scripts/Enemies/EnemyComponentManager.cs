@@ -10,6 +10,7 @@ public class EnemyComponentManager : MonoBehaviour
     [field: SerializeField] public Animator EnemyAnimator { get; private set; }
 
     [HideInInspector] public EnemySightScript sightScript { get; private set; }
+
     private void Awake()
     {
         EnemyRigidbody = GetComponent<Rigidbody2D>();
