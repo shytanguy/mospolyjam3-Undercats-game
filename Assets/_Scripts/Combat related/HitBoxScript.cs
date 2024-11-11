@@ -5,6 +5,12 @@ using UnityEngine;
 
 public class HitBoxScript : MonoBehaviour
 {
+
+    public enum DamageType
+    {
+        onEnter,
+        onStay
+    }
     [SerializeField] private float _SecondsBeforeDamage=0.5f;
 
     [SerializeField] private float _damage = 5f;
@@ -28,7 +34,11 @@ public class HitBoxScript : MonoBehaviour
 
     [SerializeField] private bool _delayDamage=true;
 
-   
+    [SerializeField] private DamageType _type;
+
+    private float _timer;
+
+    [SerializeField] private float _secondsBetweenDamage=0.5f;
     private void Awake()
     {
         _faction = GetComponent<FactionScript>();
@@ -92,9 +102,20 @@ public class HitBoxScript : MonoBehaviour
         }
         OnDamage?.Invoke();
     }
-   
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (_type==DamageType.onStay)
+        if ((_damageLayer.value & (1 << collision.gameObject.layer)) > 0 && _TriggerEntered == false)
+        { if (Time.time - _timer >= _secondsBetweenDamage)
+                {
+                    _timer = Time.time;
+                    Damage();
+                }
+        }
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (_type == DamageType.onEnter)
         if ((_damageLayer.value & (1 << collision.gameObject.layer)) > 0 && _TriggerEntered == false)
         {
             _TriggerEntered = true;

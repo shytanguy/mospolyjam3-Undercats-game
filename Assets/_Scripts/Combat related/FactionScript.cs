@@ -8,7 +8,8 @@ public class FactionScript : MonoBehaviour
     public enum Faction
     {
         player,
-        enemy
+        enemy,
+        ultimate
     }
    [field:SerializeField] public Faction userFaction { get; private set; }
 

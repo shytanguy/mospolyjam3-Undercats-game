@@ -12,7 +12,12 @@ public abstract class ProjectileAbstract : MonoBehaviour
 
     [SerializeField] protected float _Speed = 3f;
 
-  
+    private Transform _Target;
+
+    public void SetTarget(Transform newTarget)
+    {
+        _Target = newTarget;
+    }
     private void Awake()
     {
         _projectileRigidBody = GetComponent<Rigidbody2D>();
@@ -32,6 +37,7 @@ public abstract class ProjectileAbstract : MonoBehaviour
     private void Reflect(FactionScript.Faction faction)
     {
         _faction.ChangeFaction(faction);
+        _projectileRigidBody.velocity = -_projectileRigidBody.velocity;
     }
     private void OnHit()
     {

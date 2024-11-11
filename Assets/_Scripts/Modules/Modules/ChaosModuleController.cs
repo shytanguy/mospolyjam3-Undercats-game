@@ -16,7 +16,7 @@ public class ChaosModuleController : ModuleControllerAbstract
 
     public static event Action<GameObject, Vector3> OnActivated;
 
-    public static bool TurnedOn = true;
+    public static bool TurnedOn = false;
     private void Awake()
     {
         if (instance == null)
@@ -34,7 +34,7 @@ public class ChaosModuleController : ModuleControllerAbstract
 
         OnActivated?.Invoke(_prefabSpawning, _spawnOffset);
         StartCoroutine(SpawnProjectiles());
-        SendMessage(_fixedMessage);
+        SendMessage(_brokenMessage);
     }
     private IEnumerator SpawnProjectiles()
     {
@@ -49,6 +49,7 @@ public class ChaosModuleController : ModuleControllerAbstract
     {
         TurnedOn = false;
         OnDeactivated?.Invoke();
-        SendMessage(_brokenMessage);
+        SendMessage(_fixedMessage);
+       
     }
 }

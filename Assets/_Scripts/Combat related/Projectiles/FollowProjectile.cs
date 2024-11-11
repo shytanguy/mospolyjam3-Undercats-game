@@ -4,12 +4,7 @@ using UnityEngine;
 
 public class FollowProjectile : ProjectileAbstract
 {
-    private Transform _Target;
-
-    public void SetTarget(Transform newTarget)
-    {
-        _Target = newTarget;
-    }
+    
     private void FixedUpdate()
     {
         if (!_hitbox.Reflected)
