@@ -17,6 +17,7 @@ public class EnemyCircleAroundState : EnemyAbstractState
 
     public override void EnterState()
     {
+        base.EnterState();
         _timer = Time.time;
     }
 
@@ -36,6 +37,7 @@ public class EnemyCircleAroundState : EnemyAbstractState
     public override void FixedUpdateState()
     {
         MoveAroundTarget();
+        TurnAroundForPlayer();
     }
 
     private void MoveAroundTarget()

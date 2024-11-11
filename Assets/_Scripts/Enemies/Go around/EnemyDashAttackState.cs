@@ -11,6 +11,7 @@ public class EnemyDashAttackState : EnemyAbstractState
     [SerializeField] private float _dashSpeed = 8f;
     public override void EnterState()
     {
+        base.EnterState();
         _enemyComponents.EnemyRigidbody.velocity =_dashSpeed*(_enemyComponents.sightScript.GetPlayerTransform().position-transform.position).normalized;
         
         Instantiate(_hitBoxPrefab, transform);

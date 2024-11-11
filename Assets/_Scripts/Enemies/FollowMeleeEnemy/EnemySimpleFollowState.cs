@@ -13,7 +13,7 @@ public class EnemySimpleFollowState : EnemyAbstractState
     [SerializeField] private float _distanceToHit = 0.3f;
     public override void EnterState()
     {
-    
+        base.EnterState();
     }
 
     public override void ExitState()
@@ -29,6 +29,7 @@ public class EnemySimpleFollowState : EnemyAbstractState
     public override void FixedUpdateState()
     {
         MoveCloser();
+        TurnAroundForPlayer();
     }
 
     private void MoveCloser()
@@ -66,5 +67,7 @@ public class EnemySimpleFollowState : EnemyAbstractState
             _statesManager.SwitchState(EnemyStatesManager.EnemyStates.idle);
         }
     }
+
+  
 }
 

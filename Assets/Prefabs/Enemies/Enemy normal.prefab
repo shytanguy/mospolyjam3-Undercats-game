@@ -61,6 +61,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateKey: 2
   startingState: 0
+  _animationName: attack
   _hitBoxPrefab: {fileID: 8485527017811560993, guid: c5c643d676c4a3b4687c7b4925c2f7ca, type: 3}
   _spawnHitBoxOffset: {x: 0.2, y: 0}
   _animationTime: 1
@@ -78,6 +79,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateKey: 0
   startingState: 1
+  _animationName: idle
 --- !u!114 &890070666335243630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,6 +110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateKey: 1
   startingState: 0
+  _animationName: idle
   _followSpeed: 2
   _followDistance: 12
   _obstacleAvoidanceRange: 1
@@ -372,12 +375,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3300825243217956242, guid: 9d94b5a0e85a4694daefa94d6106d853, type: 3}
+  m_Sprite: {fileID: 5951845467420230455, guid: 81a7b8542627ff84da1be91a092b0aac, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.21875, y: 1.625}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -393,7 +396,7 @@ Animator:
   m_GameObject: {fileID: 5863346491934466112}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3a366c11e9ce3b9419da95a53f5828b4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -431,6 +434,7 @@ GameObject:
   - component: {fileID: 6349595887165102485}
   - component: {fileID: 2261009230406703103}
   - component: {fileID: 5093528733843045716}
+  - component: {fileID: 3324493504231621634}
   m_Layer: 6
   m_Name: overlay
   m_TagString: Untagged
@@ -575,6 +579,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _fadeDuration: 0.5
   _originalSprite: {fileID: 4474468502114549126}
+--- !u!210 &3324493504231621634
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6473515107587868416}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 2
+  m_SortAtRoot: 0
 --- !u!1001 &842339600248390465
 PrefabInstance:
   m_ObjectHideFlags: 0

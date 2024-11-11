@@ -8,7 +8,7 @@ public abstract class ProjectileAbstract : MonoBehaviour
 
     protected FactionScript _faction;
 
-    protected HitBoxScript _hitbox;
+   protected HitBoxScript _hitbox;
 
     [SerializeField] protected float _Speed = 3f;
 

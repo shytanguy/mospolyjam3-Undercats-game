@@ -18,6 +18,7 @@ public class EnemyCircleFollowRangedScript : EnemyAbstractState
     [SerializeField] private ProjectileAbstract _rangedPrefab;
     public override void EnterState()
     {
+        base.EnterState();
         _timer = Time.time;
     }
 
@@ -34,6 +35,7 @@ public class EnemyCircleFollowRangedScript : EnemyAbstractState
     public override void FixedUpdateState()
     {
         MoveAroundTarget();
+        TurnAroundForPlayer();
         if (Time.time - _timer >= _TimeInCircle)
         {
             Instantiate(_rangedPrefab, transform.position, transform.rotation).transform.right=(_enemyComponents.sightScript.GetPlayerTransform().position-transform.position).normalized;

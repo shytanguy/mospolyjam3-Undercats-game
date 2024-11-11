@@ -6,7 +6,7 @@ public class EnemyIdleState : EnemyAbstractState
 {
     public override void EnterState()
     {
- 
+        base.EnterState();
     }
 
     public override void ExitState()

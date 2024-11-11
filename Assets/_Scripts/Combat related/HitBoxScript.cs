@@ -27,6 +27,8 @@ public class HitBoxScript : MonoBehaviour
     private FactionScript _faction;
 
     [SerializeField] private bool _delayDamage=true;
+
+   
     private void Awake()
     {
         _faction = GetComponent<FactionScript>();
@@ -62,13 +64,20 @@ public class HitBoxScript : MonoBehaviour
         else
         {
             Reflected = true;
-            return true;
             OnReflect?.Invoke(faction);
+            return true;
+          
         }
     }
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(transform.position, _hitRadius);
+        if (_canReflect == false)
+        {
+            Gizmos.color = Color.red;
+
+            Gizmos.DrawSphere(transform.position, _hitRadius);
+        }
     }
     private void Damage()
     {
@@ -83,6 +92,7 @@ public class HitBoxScript : MonoBehaviour
         }
         OnDamage?.Invoke();
     }
+   
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if ((_damageLayer.value & (1 << collision.gameObject.layer)) > 0 && _TriggerEntered == false)
