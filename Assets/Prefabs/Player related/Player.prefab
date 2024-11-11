@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4428430771598037754}
   - component: {fileID: 2960639014661471252}
   - component: {fileID: 6587407050290408404}
+  - component: {fileID: 2023037072593943929}
   m_Layer: 3
   m_Name: Player sprite
   m_TagString: Untagged
@@ -123,8 +124,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71722e3430929384e830aaca7a25c417, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _turnOffSprite: {fileID: 0}
-  _turnOffColor: {r: 0, g: 0, b: 0, a: 0}
+  _turnOffSprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  _turnOffColor: {r: 0.7087576, g: 0.8113208, b: 0.7898358, a: 1}
+--- !u!210 &2023037072593943929
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394380312817723863}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 3
+  m_SortAtRoot: 0
 --- !u!1 &5521925753524676496
 GameObject:
   m_ObjectHideFlags: 0
@@ -591,7 +604,6 @@ GameObject:
   - component: {fileID: 8012891395326935700}
   - component: {fileID: 4806668999316644475}
   - component: {fileID: 212856315209170648}
-  - component: {fileID: 15810697747021930}
   m_Layer: 3
   m_Name: overlay
   m_TagString: Untagged
@@ -736,15 +748,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _fadeDuration: 0.5
   _originalSprite: {fileID: 4428430771598037754}
---- !u!210 &15810697747021930
-SortingGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8355220769099214019}
-  m_Enabled: 1
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_SortAtRoot: 0
