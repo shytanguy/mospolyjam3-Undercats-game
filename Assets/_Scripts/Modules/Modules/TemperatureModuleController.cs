@@ -9,14 +9,14 @@ public class TemperatureModuleController : ModuleControllerAbstract
 
     public static event Action<float, float, GameObject> OnDeactivated;
 
-    [SerializeField] private GameObject _effect;
+    [field: SerializeField] public GameObject _effect { get; private set; }
 
     public static event Action OnActivated;
     public static bool TurnedOn=false;
 
-    [SerializeField] private float _burnPercent = 0.05f;
+    [field:SerializeField] public float _burnPercent { get; private set; } = 0.05f;
 
-    [SerializeField] private float _cooldown = 1f;
+    [field: SerializeField] public float _cooldown { get; private set; } = 1f;
     private void Awake()
     {
         if (instance == null)

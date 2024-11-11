@@ -8,13 +8,13 @@ public class HealthModuleController : ModuleControllerAbstract
 
     public static event Action<float, float, GameObject> OnDeactivated;
 
-    [SerializeField] private GameObject _effect;
+    [field: SerializeField] public GameObject _effect { get; private set; }
 
     public static event Action OnActivated;
 
-    [SerializeField] private float _healPercent=0.05f;
+    [field:SerializeField] public float _healPercent { get; private set; } = 0.05f;
 
-    [SerializeField] private float _cooldown = 1f;
+    [field: SerializeField] public float _cooldown { get; private set; } = 1f;
 
     public static bool TurnedOn=false;
     private void Awake()

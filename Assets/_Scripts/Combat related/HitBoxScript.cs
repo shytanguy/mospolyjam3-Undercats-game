@@ -94,7 +94,7 @@ public class HitBoxScript : MonoBehaviour
     private void Damage()
     {
         
-      Collider2D[] hitColliders=  Physics2D.OverlapCircleAll(transform.position,_hitRadius,_PlayerDamageLayer);
+      Collider2D[] hitColliders=  Physics2D.OverlapCircleAll(transform.position,_hitRadius,_PlayerDamageLayer+_enemyLayers);
 
         foreach(var collider in hitColliders)
         {
@@ -125,7 +125,7 @@ public class HitBoxScript : MonoBehaviour
                     Damage();
                 }
             }
-            else if (((_faction.userFaction == FactionScript.Faction.ultimate) && ((_enemyLayers.value & (1 << collision.gameObject.layer)) > 0)|| (_PlayerDamageLayer.value & (1 << collision.gameObject.layer)) > 0))
+            else if (((_faction.userFaction == FactionScript.Faction.ultimate) && (((_enemyLayers.value & (1 << collision.gameObject.layer)) > 0)|| (_PlayerDamageLayer.value & (1 << collision.gameObject.layer)) > 0)))
             {
                 if (Time.time - _timer >= _secondsBetweenDamage)
                 {
