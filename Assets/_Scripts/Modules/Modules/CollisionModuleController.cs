@@ -36,4 +36,9 @@ public class CollisionModuleController :ModuleControllerAbstract
         CinemachineEffectsController.instance.ShakeCamera(5, 5, 0.2f);
         SendMessage(_brokenMessage);
     }
+    private IEnumerator TurnCollisionBack()
+    {
+        yield return new WaitForSeconds(1f);
+        TurnOnCollision();
+    }
 }

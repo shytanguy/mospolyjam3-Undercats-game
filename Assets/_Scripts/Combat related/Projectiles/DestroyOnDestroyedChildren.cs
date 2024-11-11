@@ -11,7 +11,7 @@ public class DestroyOnDestroyedChildren : MonoBehaviour
         objects = new SpawnableObject[transform.childCount];
         for (int i = 0; i < transform.childCount; i++)
         {
-            Debug.Log(i);
+          
             objects[i] = transform.GetChild(i).GetComponent<SpawnableObject>();
             objects[i].OnDestroyed += CheckDestroyed;
         }

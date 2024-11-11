@@ -94,13 +94,14 @@ public class HitBoxScript : MonoBehaviour
     }
     private void Damage()
     {
-        
-      Collider2D[] hitColliders=  Physics2D.OverlapCircleAll(transform.position,_hitRadius,_PlayerDamageLayer+_enemyLayers);
-
-        foreach(var collider in hitColliders)
+        LayerMask layermask = _PlayerDamageLayer | _enemyLayers;
+      Collider2D[] hitColliders=  Physics2D.OverlapCircleAll(transform.position,_hitRadius,layermask);
+        Debug.Log(_faction.userFaction);
+        foreach (var collider in hitColliders)
         {
+          
             if (collider.GetComponent<FactionScript>().userFaction == _faction.userFaction) continue;
-            Debug.Log(collider.gameObject);
+            Debug.Log("hitting ");
             collider.GetComponent<HealthScript>().TakeDamage(_damage);
             collider.GetComponent<Rigidbody2D>().AddForce(_knockBack * (collider.transform.position - transform.position).normalized, ForceMode2D.Impulse);
         }
@@ -141,6 +142,7 @@ public class HitBoxScript : MonoBehaviour
     private void TriggerEnter()
     {
         _TriggerEntered = true;
+        StopAllCoroutines();
         if (_delayDamage)
         {
             StartCoroutine(DamageDelay());
@@ -160,7 +162,8 @@ public class HitBoxScript : MonoBehaviour
             }
             else if(((_faction.userFaction == FactionScript.Faction.player) && (_enemyLayers.value & (1 << collision.gameObject.layer)) > 0 && _TriggerEntered == false))
             {
-                TriggerEnter();
+
+                Damage();
             }
             
         }

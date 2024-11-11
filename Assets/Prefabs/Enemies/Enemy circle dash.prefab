@@ -518,8 +518,8 @@ MonoBehaviour:
   startingState: 0
   _animationName: dash
   _hitBoxPrefab: {fileID: 8485527017811560993, guid: b4722f0644be9e74e969cfa69d7c7241, type: 3}
-  _animationTime: 0.7
-  _dashSpeed: 8
+  _animationTime: 1
+  _dashSpeed: 4
 --- !u!114 &6174269556755800613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -536,7 +536,7 @@ MonoBehaviour:
   startingState: 0
   _animationName: walk
   _circleSpeed: 1
-  _circleDistance: 2
+  _circleDistance: 3.5
   _obstacleAvoidanceRange: 1
   _obstacleLayer:
     serializedVersion: 2
