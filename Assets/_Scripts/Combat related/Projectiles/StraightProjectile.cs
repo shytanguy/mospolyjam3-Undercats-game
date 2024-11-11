@@ -7,7 +7,7 @@ public class StraightProjectile : ProjectileAbstract
    
     void Start()
     {
-        _projectileRigidBody.velocity = _Speed*transform.right;
+        _projectileRigidBody.velocity = _Speed*(_Target.position-transform.position).normalized;
     }
 
     

@@ -1,68 +1,86 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class GameMenuController : MonoBehaviour
 {
+    public static GameMenuController instance;
     [SerializeField] private GameObject pauseMenu;
-    [SerializeField] private GameObject mainMenu;
+
     [SerializeField] private GameObject deathMenu;
     [SerializeField] private GameObject player;
 
-    private HealthScript playerHealth;
+    private PlayerComponentsManager playerComponents;
 
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     private void Start()
     {
         if (player != null)
         {
-            playerHealth = player.GetComponent<HealthScript>();
-            if (playerHealth != null)
+            
+            playerComponents = player.GetComponent<PlayerComponentsManager>();
+            if (playerComponents != null)
             {
-                playerHealth.OnDeath += ShowDeathMenu;
+                playerComponents.healthScript.OnDeath += ShowDeathMenu;
+                playerComponents.playerInput.actions["Pause"].performed += PauseInput;
             }
+
         }
-        ShowMainMenu();
+  
     }
 
+    private void PauseInput(InputAction.CallbackContext context)
+    {
+        if (pauseMenu.activeInHierarchy)
+        {
+            ResumeGame();
+        }
+        else
+        {
+            PauseGame();
+        }
+    }
     public void PauseGame()
     {
         pauseMenu.SetActive(true);
-        Time.timeScale = 0f;
+        TimeController.StopTime(this);
     }
 
     public void ResumeGame()
     {
         pauseMenu.SetActive(false);
-        Time.timeScale = 1f;
+        TimeController.ResumeTimeNoCaller();
     }
 
-    public void ShowMainMenu()
-    {
-        mainMenu.SetActive(true);
-        Time.timeScale = 0f;
-    }
-
-    public void StartGame()
-    {
-        mainMenu.SetActive(false);
-        Time.timeScale = 1f;
-    }
+ 
 
     public void ShowDeathMenu()
     {
         deathMenu.SetActive(true);
-        Time.timeScale = 0f;
+        TimeController.StopTime(this);
     }
 
     private void OnDestroy()
     {
-        if (playerHealth != null)
+        if (playerComponents != null)
         {
-            playerHealth.OnDeath -= ShowDeathMenu;
+            playerComponents.healthScript.OnDeath -= ShowDeathMenu;
+            playerComponents.playerInput.actions["Pause"].performed -= PauseInput;
         }
     }
     public void RestartGame()
     {
-        Time.timeScale = 1f;
+        TimeController.ResumeTimeNoCaller();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 

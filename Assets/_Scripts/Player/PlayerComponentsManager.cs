@@ -12,6 +12,7 @@ public class PlayerComponentsManager : MonoBehaviour
     [HideInInspector] public PlayerAbilitySwitcher abilitySwitcher { get; private set; }
 
     [HideInInspector] public OverlaySpriteScript overlayScript { get; private set; }
+    [HideInInspector] public HealthScript healthScript { get; private set; }
     private void Awake()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
@@ -23,6 +24,8 @@ public class PlayerComponentsManager : MonoBehaviour
         abilitySwitcher = GetComponent<PlayerAbilitySwitcher>();
 
         overlayScript = GetComponentInChildren<OverlaySpriteScript>();
+
+        healthScript = GetComponent<HealthScript>();
     }
 
 

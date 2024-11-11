@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7168672580956135263}
   - component: {fileID: 6117806103371748521}
   - component: {fileID: 7343184577277632244}
+  - component: {fileID: 7038983757698165146}
   m_Layer: 7
   m_Name: straight projectile
   m_TagString: Untagged
@@ -81,7 +82,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: fab4236f385431d42b1b86df1456240d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.36066484, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -146,9 +147,12 @@ MonoBehaviour:
   _SecondsBeforeDamage: 0.2
   _damage: 10
   _knockBack: 0
-  _damageLayer:
+  _PlayerDamageLayer:
     serializedVersion: 2
-    m_Bits: 72
+    m_Bits: 8
+  _enemyLayers:
+    serializedVersion: 2
+    m_Bits: 64
   _hitRadius: 0.2
   _delayDamage: 1
   _type: 0
@@ -202,3 +206,18 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.25
+--- !u!114 &7038983757698165146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3992092977537251436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7b77517f22b55740aa4bd96ea8ddf5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _TimeBeforeDeleted: 10
+  _duration: 0.3
+  _destroyInstantly: 0

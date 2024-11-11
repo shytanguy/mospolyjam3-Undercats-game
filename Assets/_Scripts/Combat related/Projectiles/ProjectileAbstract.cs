@@ -12,7 +12,7 @@ public abstract class ProjectileAbstract : MonoBehaviour
 
     [SerializeField] protected float _Speed = 3f;
 
-    private Transform _Target;
+    protected Transform _Target;
 
     public void SetTarget(Transform newTarget)
     {

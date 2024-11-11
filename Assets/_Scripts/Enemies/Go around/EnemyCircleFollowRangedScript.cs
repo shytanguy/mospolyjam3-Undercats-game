@@ -38,7 +38,8 @@ public class EnemyCircleFollowRangedScript : EnemyAbstractState
         TurnAroundForPlayer();
         if (Time.time - _timer >= _TimeInCircle)
         {
-            Instantiate(_rangedPrefab, transform.position, transform.rotation).transform.right=(_enemyComponents.sightScript.GetPlayerTransform().position-transform.position).normalized;
+            _timer = Time.time;
+            Instantiate(_rangedPrefab, transform.position, Quaternion.identity).SetTarget(_enemyComponents.sightScript.GetPlayerTransform());
         }
     }
 

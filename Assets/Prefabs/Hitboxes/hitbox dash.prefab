@@ -96,11 +96,16 @@ MonoBehaviour:
   _SecondsBeforeDamage: 0
   _damage: 10
   _knockBack: 5
-  _damageLayer:
+  _PlayerDamageLayer:
     serializedVersion: 2
     m_Bits: 8
+  _enemyLayers:
+    serializedVersion: 2
+    m_Bits: 64
   _hitRadius: 0.95
   _delayDamage: 0
+  _type: 0
+  _secondsBetweenDamage: 0.5
 --- !u!114 &4973404294721545455
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -24,7 +24,9 @@ public class HitBoxScript : MonoBehaviour
 
     public event Action OnDamage;
 
-   [SerializeField] private LayerMask _damageLayer;
+   [SerializeField] private LayerMask _PlayerDamageLayer;
+
+    [SerializeField] private LayerMask _enemyLayers;
 
     private bool _TriggerEntered = false;
 
@@ -92,7 +94,7 @@ public class HitBoxScript : MonoBehaviour
     private void Damage()
     {
         
-      Collider2D[] hitColliders=  Physics2D.OverlapCircleAll(transform.position,_hitRadius,_damageLayer);
+      Collider2D[] hitColliders=  Physics2D.OverlapCircleAll(transform.position,_hitRadius,_PlayerDamageLayer);
 
         foreach(var collider in hitColliders)
         {
@@ -100,33 +102,65 @@ public class HitBoxScript : MonoBehaviour
             collider.GetComponent<HealthScript>().TakeDamage(_damage);
             collider.GetComponent<Rigidbody2D>().AddForce(_knockBack * (collider.transform.position - transform.position).normalized, ForceMode2D.Impulse);
         }
+        if (hitColliders!=null)
         OnDamage?.Invoke();
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (_type==DamageType.onStay)
-        if ((_damageLayer.value & (1 << collision.gameObject.layer)) > 0 && _TriggerEntered == false)
-        { if (Time.time - _timer >= _secondsBetweenDamage)
+        if (_type == DamageType.onStay)
+        {
+            if (((_faction.userFaction == FactionScript.Faction.enemy) && (_PlayerDamageLayer.value & (1 << collision.gameObject.layer)) > 0 ))
+            {
+                if (Time.time - _timer >= _secondsBetweenDamage)
                 {
                     _timer = Time.time;
                     Damage();
                 }
+            }
+            else if (((_faction.userFaction == FactionScript.Faction.player) && (_enemyLayers.value & (1 << collision.gameObject.layer)) > 0 ))
+            {
+                if (Time.time - _timer >= _secondsBetweenDamage)
+                {
+                    _timer = Time.time;
+                    Damage();
+                }
+            }
+            else if (((_faction.userFaction == FactionScript.Faction.ultimate) && ((_enemyLayers.value & (1 << collision.gameObject.layer)) > 0)|| (_PlayerDamageLayer.value & (1 << collision.gameObject.layer)) > 0))
+            {
+                if (Time.time - _timer >= _secondsBetweenDamage)
+                {
+                    _timer = Time.time;
+                    Damage();
+                }
+            }
+           
+        }
+    }
+    private void TriggerEnter()
+    {
+        _TriggerEntered = true;
+        if (_delayDamage)
+        {
+            StartCoroutine(DamageDelay());
+        }
+        else
+        {
+            Damage();
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (_type == DamageType.onEnter)
-        if ((_damageLayer.value & (1 << collision.gameObject.layer)) > 0 && _TriggerEntered == false)
         {
-            _TriggerEntered = true;
-            if (_delayDamage)
+            if (((_faction.userFaction==FactionScript.Faction.enemy) &&(_PlayerDamageLayer.value & (1 << collision.gameObject.layer)) > 0 && _TriggerEntered == false))
             {
-                StartCoroutine(DamageDelay());
+                TriggerEnter();
             }
-            else
+            else if(((_faction.userFaction == FactionScript.Faction.player) && (_enemyLayers.value & (1 << collision.gameObject.layer)) > 0 && _TriggerEntered == false))
             {
-                Damage();
+                TriggerEnter();
             }
+            
         }
     }
 }
