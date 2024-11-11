@@ -8,7 +8,7 @@ public class ObjectRotator : MonoBehaviour
 
     private void FixedUpdate()
     {
-        transform.Rotate(Vector3.up, rotationSpeed * Time.fixedDeltaTime);
+        transform.Rotate(Vector3.forward, rotationSpeed );
     }
 }
 

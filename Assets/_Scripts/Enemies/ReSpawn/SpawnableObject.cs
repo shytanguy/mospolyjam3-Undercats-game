@@ -1,17 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class SpawnableObject : MonoBehaviour
 {
-    public delegate void DestroyedAction();
-    public event DestroyedAction OnDestroyed;
+    
+    public event Action OnDestroyed;
 
     private void OnDestroy()
     {
-        if (OnDestroyed != null)
-        {
-            OnDestroyed.Invoke();
-        }
+      
+            OnDestroyed?.Invoke();
+        
     }
 }

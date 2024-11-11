@@ -76,6 +76,7 @@ public class HitBoxScript : MonoBehaviour
         else
         {
             Reflected = true;
+            _TriggerEntered = false;
             OnReflect?.Invoke(faction);
             return true;
           
@@ -99,6 +100,7 @@ public class HitBoxScript : MonoBehaviour
         foreach(var collider in hitColliders)
         {
             if (collider.GetComponent<FactionScript>().userFaction == _faction.userFaction) continue;
+            Debug.Log(collider.gameObject);
             collider.GetComponent<HealthScript>().TakeDamage(_damage);
             collider.GetComponent<Rigidbody2D>().AddForce(_knockBack * (collider.transform.position - transform.position).normalized, ForceMode2D.Impulse);
         }

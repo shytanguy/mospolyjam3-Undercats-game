@@ -42,7 +42,8 @@ public  class PlayerAttackState : PlayerAbstractState
         _canInput = false;
 
         StartCoroutine(HitBoxSpawnDelay());
-        _componentsManager.playerRigidbody.velocity = Vector2.zero;
+       
+        _componentsManager.playerRigidbody.velocity = transform.right.normalized;
         StartCoroutine(InputDelay());
 
         StartCoroutine(SwitchStateDelay());
@@ -51,6 +52,7 @@ public  class PlayerAttackState : PlayerAbstractState
     }
     public override void ExitState()
     {
+        _componentsManager.playerRigidbody.velocity = Vector2.zero;
         _componentsManager.playerInput.actions["Attack"].performed -= OnAttackInput;
     }
     private void OnAttackInput(InputAction.CallbackContext context)

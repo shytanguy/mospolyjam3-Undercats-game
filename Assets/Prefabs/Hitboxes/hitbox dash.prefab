@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8485527017811560993}
   - component: {fileID: 4973404294721545455}
   - component: {fileID: 408543460036299306}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: hitbox dash
   m_TagString: Untagged
   m_Icon: {fileID: 0}

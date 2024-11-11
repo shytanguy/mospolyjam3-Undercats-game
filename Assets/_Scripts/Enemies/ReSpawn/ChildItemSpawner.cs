@@ -2,7 +2,7 @@ using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class EnemySpawnHandler : MonoBehaviour
+public class ChildItemSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject prefabToSpawn;
     [SerializeField] private float respawnDelay = 5f;
@@ -21,7 +21,10 @@ public class EnemySpawnHandler : MonoBehaviour
             spawnedObject.GetComponent<SpawnableObject>().OnDestroyed += HandleObjectDestroyed;
         }
     }
-
+    private void OnDisable()
+    {
+        spawnedObject.GetComponent<SpawnableObject>().OnDestroyed -= HandleObjectDestroyed;
+    }
     private void HandleObjectDestroyed()
     {
         StartCoroutine(RespawnAfterDelay());

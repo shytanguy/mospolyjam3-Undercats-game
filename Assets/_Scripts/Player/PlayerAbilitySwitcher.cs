@@ -13,6 +13,8 @@ public class PlayerAbilitySwitcher : MonoBehaviour
     public event Action<AbilityAbstract> OnSwitchingAbility;
 
     private PlayerComponentsManager _componentsManager;
+
+    public event Action<AbilityAbstract> OnNewAbility;
     private void Awake()
     {
         _componentsManager = GetComponent<PlayerComponentsManager>();
@@ -25,9 +27,16 @@ public class PlayerAbilitySwitcher : MonoBehaviour
     {
         _componentsManager.playerInput.actions["Switch Ability"].performed -= SwitchAbilityInput;
     }
+    public void AddAbility(AbilityAbstract ability)
+    {
+        if (_playerAbilities.Contains(ability)) return;
+        _playerAbilities.Add(ability);
+        OnNewAbility?.Invoke(ability);
+    }
     private void SwitchAbilityInput(InputAction.CallbackContext context)
     {
         SwitchAbility();
+
     }
     private void Start()
     {

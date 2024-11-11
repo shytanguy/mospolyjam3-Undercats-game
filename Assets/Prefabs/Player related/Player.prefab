@@ -263,7 +263,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &7696044474153147368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -382,8 +382,8 @@ MonoBehaviour:
   stateKey: 2
   startingState: 0
   <stateType>k__BackingField: 1
-  _TimeBeforeSwitchState: 1
-  _TimeBeforeInput: 0.7
+  _TimeBeforeSwitchState: 0.7
+  _TimeBeforeInput: 0.5
   _HitBoxSpawnDelay: 0.2
   _damage: 5
   _hitBoxDimensions: {x: 0.6, y: 1.5}
@@ -398,7 +398,7 @@ MonoBehaviour:
   _timeZoom: 0.5
   _timePerZoom: 0.2
   _zoomPercent: 1.15
-  _counterDamageMultiplier: 1.2
+  _counterDamageMultiplier: 2
 --- !u!114 &3932596944697421843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -414,8 +414,8 @@ MonoBehaviour:
   stateKey: 3
   startingState: 0
   <stateType>k__BackingField: 1
-  _TimeBeforeSwitchState: 1
-  _TimeBeforeInput: 0.7
+  _TimeBeforeSwitchState: 0.7
+  _TimeBeforeInput: 0.5
   _HitBoxSpawnDelay: 0.2
   _damage: 5
   _hitBoxDimensions: {x: 1.2, y: 1.19}
@@ -430,7 +430,7 @@ MonoBehaviour:
   _timeZoom: 0.5
   _timePerZoom: 0.2
   _zoomPercent: 1.15
-  _counterDamageMultiplier: 1.2
+  _counterDamageMultiplier: 2
 --- !u!114 &963171509599222599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -446,8 +446,8 @@ MonoBehaviour:
   stateKey: 4
   startingState: 0
   <stateType>k__BackingField: 1
-  _TimeBeforeSwitchState: 1
-  _TimeBeforeInput: 0.7
+  _TimeBeforeSwitchState: 0.7
+  _TimeBeforeInput: 0.5
   _HitBoxSpawnDelay: 0.2
   _damage: 2
   _hitBoxDimensions: {x: 1.17, y: 1.06}
@@ -462,7 +462,7 @@ MonoBehaviour:
   _timeZoom: 0.5
   _timePerZoom: 0.2
   _zoomPercent: 1.15
-  _counterDamageMultiplier: 1.2
+  _counterDamageMultiplier: 2
 --- !u!114 &3057474037992505414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -479,6 +479,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8037660a8ded5214985cf06c060f67e9, type: 2}
   - {fileID: 11400000, guid: 13608500dd2db8947a1fe4f8d008faec, type: 2}
   - {fileID: 11400000, guid: 99fbca902aff4544ea4ee2dbb519207d, type: 2}
+  - {fileID: 11400000, guid: 82929a91a697cec4f8064c1cf5282aae, type: 2}
 --- !u!114 &6575447850596699351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -507,6 +508,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64bb743c0e858134c9df05796f7c837f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _TurnedOffOnStart: 0
 --- !u!114 &563511205841383823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -580,6 +582,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _healSound: {fileID: 0}
+  _TurnedOnOnStart: 0
+  _additionalHeal: 0
 --- !u!114 &6042482369162175598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -593,6 +597,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _burnSound: {fileID: 0}
+  _additionalDamage: 0
+  _activeOnStart: 0
 --- !u!114 &4503498952442527148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -761,3 +767,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _fadeDuration: 0.5
   _originalSprite: {fileID: 4428430771598037754}
+  _overlayOriginalSprite: 0
