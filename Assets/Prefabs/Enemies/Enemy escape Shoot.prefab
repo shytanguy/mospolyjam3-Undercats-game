@@ -529,7 +529,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dropItemOnDeathPrefab: {fileID: 0}
   _deathClip: {fileID: 0}
-  _deathParticle: {fileID: 0}
+  _deathParticle: {fileID: 904849491935966210, guid: 5034fd565751a014cb87539680d430e1, type: 3}
 --- !u!114 &8115977078875613149
 MonoBehaviour:
   m_ObjectHideFlags: 0

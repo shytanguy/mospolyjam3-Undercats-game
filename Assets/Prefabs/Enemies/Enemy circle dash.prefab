@@ -653,10 +653,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6efbe980fcacb05488230eb39c98a23a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <_maxHealth>k__BackingField: 100
+  <_maxHealth>k__BackingField: 200
   _damageCoolDownEnabled: 0
   _invincibilityDelay: 0.5
-  _damageSound: {fileID: 0}
+  _damageSound: {fileID: 8300000, guid: e5976bc8952a2bd4cab5672642e544ac, type: 3}
 --- !u!114 &7130773884470008519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -697,7 +697,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dropItemOnDeathPrefab: {fileID: 0}
   _deathClip: {fileID: 0}
-  _deathParticle: {fileID: 0}
+  _deathParticle: {fileID: 904849491935966210, guid: 5034fd565751a014cb87539680d430e1, type: 3}
 --- !u!114 &1508531930921546434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -711,8 +711,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _healSound: {fileID: 0}
-  _TurnedOnOnStart: 0
-  _additionalHeal: 0
+  _TurnedOnOnStart: 1
+  _additionalHeal: 0.02
 --- !u!114 &4873088535463598342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -726,7 +726,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _burnSound: {fileID: 0}
-  _additionalDamage: 0.05
+  _additionalDamage: 0.1
   _activeOnStart: 0
 --- !u!114 &2619107760198400330
 MonoBehaviour:
