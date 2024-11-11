@@ -40,8 +40,9 @@ public class ChaosModuleController : ModuleControllerAbstract
     {
         while (TurnedOn)
         {
-            yield return new WaitForSeconds(_TimeBetweenSpawns);
 
+            yield return new WaitForSeconds(_TimeBetweenSpawns);
+            CinemachineEffectsController.instance.ShakeCamera(5, 5, 0.35f);
             OnActivated?.Invoke(_prefabSpawning, _spawnOffset);
         }
     }

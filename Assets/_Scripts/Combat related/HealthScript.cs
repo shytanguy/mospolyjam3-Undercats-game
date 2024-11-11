@@ -20,6 +20,8 @@ public class HealthScript : MonoBehaviour
     public event Action OnDeath;
 
     private OverlaySpriteScript overlayScript;
+
+    [SerializeField] private AudioClip _damageSound;
     private void Awake()
     {
         _currentHealth = _maxHealth;
@@ -32,7 +34,8 @@ public class HealthScript : MonoBehaviour
         if (_isInvincible || _currentHealth <= 0) return;
 
         _currentHealth -= damage;
-
+        if (_damageSound!=null)
+        AudioManager.audioManager.PlaySound(_damageSound);
         OnDamageTaken?.Invoke(_currentHealth);
 
         if (overlayScript!=null)

@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Animations;
+
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -35,7 +35,7 @@ public  class PlayerAttackState : PlayerAbstractState
     [SerializeField] private float _zoomPercent = 1.3f;
 
     private bool _countered=false;
-
+    [SerializeField] private AudioClip _parry;
     [SerializeField] private float _counterDamageMultiplier=1.2f;
     public override void EnterState()
     {
@@ -57,6 +57,7 @@ public  class PlayerAttackState : PlayerAbstractState
     }
     private void OnAttackInput(InputAction.CallbackContext context)
     {
+        return;
         if (!_canInput) return;
 
         Vector2 direction = _componentsManager.playerInput.actions["Move"].ReadValue<Vector2>();
@@ -125,6 +126,7 @@ public  class PlayerAttackState : PlayerAbstractState
     private void Counter()
     {
         if (_countered) return;
+        AudioManager.audioManager.PlaySound(_parry);
         _componentsManager.overlayScript.OverlayColorWhite();
         Instantiate(_counterEffectPrefab, transform.position, Quaternion.identity);
         TimeController.SetTimeScale(0.7f, this);

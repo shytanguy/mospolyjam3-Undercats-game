@@ -33,6 +33,7 @@ public class CollisionModuleController :ModuleControllerAbstract
     {
         TurnedOn = false;
         OnDeactivated?.Invoke();
+        CinemachineEffectsController.instance.ShakeCamera(5, 5, 0.2f);
         SendMessage(_brokenMessage);
     }
 }

@@ -12,7 +12,7 @@ public class CinemachineEffectsController : MonoBehaviour
 
     public static CinemachineEffectsController instance;
 
-
+    private bool zoomIn=false;
     private void Awake()
     {
         if (instance == null)
@@ -35,6 +35,8 @@ public class CinemachineEffectsController : MonoBehaviour
     }
     private IEnumerator ZoomCameraForTime(float timePerZoom, float percent, CinemachineVirtualCamera camera,float timeZoom)
     {
+        if (zoomIn) yield break;
+        zoomIn = true;
         float size = camera.m_Lens.OrthographicSize;
         float timer = 0;
         float targetSize = camera.m_Lens.OrthographicSize / percent;
@@ -52,6 +54,7 @@ public class CinemachineEffectsController : MonoBehaviour
             timer += Time.deltaTime;
             yield return null;
         }
+        zoomIn = false;
         camera.m_Lens.OrthographicSize = size;
     }
     private IEnumerator ShakeCameraIE(int amplitude, int frequency, float timeShake, CinemachineBasicMultiChannelPerlin perlin)

@@ -446,6 +446,7 @@ GameObject:
   - component: {fileID: 1508531930921546434}
   - component: {fileID: 4873088535463598342}
   - component: {fileID: 2619107760198400330}
+  - component: {fileID: 6247802396524263030}
   m_Layer: 6
   m_Name: Enemy circle dash
   m_TagString: Untagged
@@ -652,9 +653,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6efbe980fcacb05488230eb39c98a23a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <_maxHealth>k__BackingField: 1000
+  <_maxHealth>k__BackingField: 100
   _damageCoolDownEnabled: 0
   _invincibilityDelay: 0.5
+  _damageSound: {fileID: 0}
 --- !u!114 &7130773884470008519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -740,6 +742,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabToSpawn: {fileID: 255242491717039470, guid: 14b3d7f692e5b884e94ae3408f3c178a, type: 3}
   respawnDelay: 5
+--- !u!114 &6247802396524263030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8958187891494646592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a38e033bcaaf034999e683a3c17cd55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _walkEffect: {fileID: 0}
+  _walkSounds:
+  - {fileID: 8300000, guid: ff57d69fde0f3ec4787167575bf0abb9, type: 3}
+  - {fileID: 8300000, guid: ba2e13e286d545a459eaf2315b877a56, type: 3}
+  _attack: {fileID: 8300000, guid: 25812137030545e4eadf2e3cdb53b610, type: 3}
 --- !u!1001 &480590027790484215
 PrefabInstance:
   m_ObjectHideFlags: 0

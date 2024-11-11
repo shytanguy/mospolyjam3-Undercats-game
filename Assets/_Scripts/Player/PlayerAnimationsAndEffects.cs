@@ -13,6 +13,8 @@ public class PlayerAnimationsAndEffects : MonoBehaviour
     [SerializeField] private AudioClip[] _walkSounds;
     [SerializeField] private AudioClip[] _attackSounds;
 
+    [SerializeField] private AudioClip _dash;
+
     private PlayerStatesManager.PlayerStates _currentKey;
     private void Awake()
     {
@@ -51,8 +53,13 @@ public class PlayerAnimationsAndEffects : MonoBehaviour
         switch (NewState)
         {
             case PlayerStatesManager.PlayerStates.idle: _components.playerAnimator.Play("idle"); break;
-            case PlayerStatesManager.PlayerStates.walk: _components.playerAnimator.Play("walk"); break;
-            case PlayerStatesManager.PlayerStates.dash: _components.playerAnimator.Play("dash"); break;
+            case PlayerStatesManager.PlayerStates.walk: _components.playerAnimator.Play("walk");StartCoroutine( PlaySoundRepeat(_walkSounds, PlayerStatesManager.PlayerStates.walk)); break;
+            case PlayerStatesManager.PlayerStates.dash: _components.playerAnimator.Play("dash");AudioManager.audioManager.PlaySound(_dash); break;
+            case PlayerStatesManager.PlayerStates.attackMiddle:
+                _components.playerAnimator.Play("attackMid");
+                AudioManager.audioManager.PlaySound(_attackSounds[UnityEngine.Random.Range(0, _attackSounds.Length)]); break;
+            case PlayerStatesManager.PlayerStates.attackTop: AudioManager.audioManager.PlaySound(_attackSounds[UnityEngine.Random.Range(0, _attackSounds.Length)]); break;
+            case PlayerStatesManager.PlayerStates.attackDown: AudioManager.audioManager.PlaySound(_attackSounds[UnityEngine.Random.Range(0, _attackSounds.Length)]); break;
 
         }
        

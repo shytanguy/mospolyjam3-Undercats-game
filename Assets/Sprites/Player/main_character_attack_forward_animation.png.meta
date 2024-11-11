@@ -1,0 +1,684 @@
+fileFormatVersion: 2
+guid: 1ea1b1017e97be84b93864b99c1fbbe6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4998184789874753740
+    second: main_character_attack_forward_animation_0
+  - first:
+      213: -6006017284569909749
+    second: main_character_attack_forward_animation_1
+  - first:
+      213: -3754743376928567969
+    second: main_character_attack_forward_animation_2
+  - first:
+      213: 6639606440077158883
+    second: main_character_attack_forward_animation_3
+  - first:
+      213: -7637179279928472990
+    second: main_character_attack_forward_animation_4
+  - first:
+      213: 6498571687619903179
+    second: main_character_attack_forward_animation_5
+  - first:
+      213: 665309800955759613
+    second: main_character_attack_forward_animation_6
+  - first:
+      213: 6441480591067031931
+    second: main_character_attack_forward_animation_7
+  - first:
+      213: 2469192255466924892
+    second: main_character_attack_forward_animation_8
+  - first:
+      213: -322792703366238784
+    second: main_character_attack_forward_animation_9
+  - first:
+      213: 5097199232912540724
+    second: main_character_attack_forward_animation_10
+  - first:
+      213: 6509555702291687240
+    second: main_character_attack_forward_animation_11
+  - first:
+      213: -8634671993195314525
+    second: main_character_attack_forward_animation_12
+  - first:
+      213: -6554096716635784518
+    second: main_character_attack_forward_animation_13
+  - first:
+      213: -7504953418882658404
+    second: main_character_attack_forward_animation_14
+  - first:
+      213: -6151379392517349173
+    second: main_character_attack_forward_animation_15
+  - first:
+      213: -1266735273318979178
+    second: main_character_attack_forward_animation_16
+  - first:
+      213: 1672246383774065035
+    second: main_character_attack_forward_animation_17
+  - first:
+      213: 2796382357294835500
+    second: main_character_attack_forward_animation_18
+  - first:
+      213: -1434554452877261858
+    second: main_character_attack_forward_animation_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: main_character_attack_forward_animation_0
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 0
+        width: 38
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43f31c54a61e2aab0800000000000000
+      internalID: -4998184789874753740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_character_attack_forward_animation_1
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 53
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b06ba56d91756aca0800000000000000
+      internalID: -6006017284569909749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_character_attack_forward_animation_2
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 0
+        width: 59
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5d0c6bcac874ebc0800000000000000
+      internalID: -3754743376928567969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_character_attack_forward_animation_3
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 0
+        width: 59
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e9e13d01ee942c50800000000000000
+      internalID: 6639606440077158883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_character_attack_forward_animation_4
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 0
+        width: 62
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26ac3ed88e9430690800000000000000
+      internalID: -7637179279928472990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_character_attack_forward_animation_5
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 0
+        width: 89
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcebefbd4809f2a50800000000000000
+      internalID: 6498571687619903179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_character_attack_forward_animation_6
+      rect:
+        serializedVersion: 2
+        x: 957
+        y: 0
+        width: 89
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfbcd8f2db7ab3900800000000000000
+      internalID: 665309800955759613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_character_attack_forward_animation_7
+      rect:
+        serializedVersion: 2
+        x: 1111
+        y: 0
+        width: 89
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b79af1a187cb46950800000000000000
+      internalID: 6441480591067031931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_character_attack_forward_animation_8
+      rect:
+        serializedVersion: 2
+        x: 1265
+        y: 0
+        width: 89
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5b60452645544220800000000000000
+      internalID: 2469192255466924892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_character_attack_forward_animation_9
+      rect:
+        serializedVersion: 2
+        x: 1419
+        y: 0
+        width: 89
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cd64cb1fb5358bf0800000000000000
+      internalID: -322792703366238784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_character_attack_forward_animation_10
+      rect:
+        serializedVersion: 2
+        x: 1573
+        y: 0
+        width: 89
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 434452b32b3ecb640800000000000000
+      internalID: 5097199232912540724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_character_attack_forward_animation_11
+      rect:
+        serializedVersion: 2
+        x: 1727
+        y: 0
+        width: 89
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 847e6b01c66965a50800000000000000
+      internalID: 6509555702291687240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_character_attack_forward_animation_12
+      rect:
+        serializedVersion: 2
+        x: 1881
+        y: 0
+        width: 103
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a24495129b7b2880800000000000000
+      internalID: -8634671993195314525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_character_attack_forward_animation_13
+      rect:
+        serializedVersion: 2
+        x: 2035
+        y: 0
+        width: 66
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ababe55e2cb2b05a0800000000000000
+      internalID: -6554096716635784518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_character_attack_forward_animation_14
+      rect:
+        serializedVersion: 2
+        x: 2189
+        y: 0
+        width: 80
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9f45a3e0ac09d790800000000000000
+      internalID: -7504953418882658404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_character_attack_forward_animation_15
+      rect:
+        serializedVersion: 2
+        x: 2343
+        y: 0
+        width: 99
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc0685ea809e1aaa0800000000000000
+      internalID: -6151379392517349173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_character_attack_forward_animation_16
+      rect:
+        serializedVersion: 2
+        x: 2497
+        y: 0
+        width: 113
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6996d59faf6ab6ee0800000000000000
+      internalID: -1266735273318979178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_character_attack_forward_animation_17
+      rect:
+        serializedVersion: 2
+        x: 2651
+        y: 0
+        width: 118
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b81e8c1e933053710800000000000000
+      internalID: 1672246383774065035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_character_attack_forward_animation_18
+      rect:
+        serializedVersion: 2
+        x: 2805
+        y: 0
+        width: 120
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c276ab620febec620800000000000000
+      internalID: 2796382357294835500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_character_attack_forward_animation_19
+      rect:
+        serializedVersion: 2
+        x: 2959
+        y: 0
+        width: 120
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed3cb416350771ce0800000000000000
+      internalID: -1434554452877261858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_character_attack_forward_animation_20
+      rect:
+        serializedVersion: 2
+        x: 3116
+        y: 0
+        width: 120
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0142902109775cf4db04c35e5241e3b8
+      internalID: -951175556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_character_attack_forward_animation_21
+      rect:
+        serializedVersion: 2
+        x: 3267
+        y: 0
+        width: 120
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a29c11abbe658d40b66852eada4a379
+      internalID: -434426057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 7b15cfba825b7634db4e92c82f94e51d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      main_character_attack_forward_animation_0: -4998184789874753740
+      main_character_attack_forward_animation_1: -6006017284569909749
+      main_character_attack_forward_animation_10: 5097199232912540724
+      main_character_attack_forward_animation_11: 6509555702291687240
+      main_character_attack_forward_animation_12: -8634671993195314525
+      main_character_attack_forward_animation_13: -6554096716635784518
+      main_character_attack_forward_animation_14: -7504953418882658404
+      main_character_attack_forward_animation_15: -6151379392517349173
+      main_character_attack_forward_animation_16: -1266735273318979178
+      main_character_attack_forward_animation_17: 1672246383774065035
+      main_character_attack_forward_animation_18: 2796382357294835500
+      main_character_attack_forward_animation_19: -1434554452877261858
+      main_character_attack_forward_animation_2: -3754743376928567969
+      main_character_attack_forward_animation_20: -951175556
+      main_character_attack_forward_animation_21: -434426057
+      main_character_attack_forward_animation_3: 6639606440077158883
+      main_character_attack_forward_animation_4: -7637179279928472990
+      main_character_attack_forward_animation_5: 6498571687619903179
+      main_character_attack_forward_animation_6: 665309800955759613
+      main_character_attack_forward_animation_7: 6441480591067031931
+      main_character_attack_forward_animation_8: 2469192255466924892
+      main_character_attack_forward_animation_9: -322792703366238784
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

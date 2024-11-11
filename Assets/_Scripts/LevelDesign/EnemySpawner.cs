@@ -32,16 +32,16 @@ public class EnemySpawner : MonoBehaviour
 
         if (_spawnMode == SpawnMode.SpawnRandom)
         {
-          
-            GameObject spawnedEnemy = Instantiate(_enemyPrefabs[0], transform.position, Quaternion.identity);
+
+            GameObject spawnedEnemy = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
             spawnedEnemy.GetComponent<HealthScript>().OnDeath += (() => OnEnemyDestroyed(spawnedEnemy));
             _activeEnemies.Add(spawnedEnemy);
 
         }
         else if (_spawnMode == SpawnMode.SpawnAndRemove)
         {
-
-            GameObject spawnedEnemy = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
+            GameObject spawnedEnemy = Instantiate(_enemyPrefabs[0], transform.position, Quaternion.identity);
+    
             spawnedEnemy.GetComponent<HealthScript>().OnDeath+=(() =>OnEnemyDestroyed(spawnedEnemy));
             _activeEnemies.Add(spawnedEnemy);
 

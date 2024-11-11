@@ -23,7 +23,7 @@ public class AudioManager : MonoBehaviour
 
     private bool coroutineEnd=true;
 
-    [SerializeField] private AudioClip[] _levelMusic;
+
     private void Awake()
     {
         if (audioManager == null)
@@ -43,19 +43,8 @@ public class AudioManager : MonoBehaviour
       
 
     }
-    private void OnEnable()
-    {
-        SceneManager.sceneLoaded += OnSceneLoad;
-    }
-    private void OnDisable()
-    {
-        SceneManager.sceneLoaded -= OnSceneLoad;
-    }
-    private void OnSceneLoad(Scene scene,LoadSceneMode mode)
-    {
-      if (_levelMusic.Length>=scene.buildIndex)
-        ChangeMusic(_levelMusic[scene.buildIndex]);
-    }
+
+  
     public void changeVolumeMusic(float volumeChange)
     {
         musicSource.volume += volumeChange;

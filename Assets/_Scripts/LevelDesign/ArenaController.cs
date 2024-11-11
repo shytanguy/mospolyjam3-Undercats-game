@@ -16,7 +16,7 @@ public class ArenaController : MonoBehaviour
         foreach(var spawner in _spawners)
         {
             spawner.onAllEnemiesDestroyed += (() => RemoveSpawner(spawner));
-            spawner.OnEnemyDefeated += StartSpawning;
+            spawner.OnEnemyDefeated += SpawnEnemy;
         }
         StartCoroutine(SpawnDelayCoroutine());
     }
@@ -25,15 +25,19 @@ public class ArenaController : MonoBehaviour
         foreach (var spawner in _spawners)
         {
             spawner.onAllEnemiesDestroyed -= (() => RemoveSpawner(spawner));
-            spawner.OnEnemyDefeated -= StartSpawning;
+            spawner.OnEnemyDefeated -= SpawnEnemy;
         }
     }
     private void RemoveSpawner(EnemySpawner spawner)
     {
         spawner.onAllEnemiesDestroyed -= (() => RemoveSpawner(spawner));
-        spawner.OnEnemyDefeated -= StartSpawning;
+        spawner.OnEnemyDefeated -= SpawnEnemy;
         _spawners.Remove(spawner);
         Destroy(spawner);
+    }
+    private void SpawnEnemy()
+    {
+        _spawners[UnityEngine.Random.Range(0, _spawners.Count)].SpawnRandomEnemy();
     }
     private IEnumerator SpawnDelayCoroutine()
     {

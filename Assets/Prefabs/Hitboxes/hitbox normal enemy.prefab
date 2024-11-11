@@ -95,7 +95,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _SecondsBeforeDamage: 0.25
   _damage: 5
-  _knockBack: 8
+  _knockBack: 1
   _PlayerDamageLayer:
     serializedVersion: 2
     m_Bits: 8

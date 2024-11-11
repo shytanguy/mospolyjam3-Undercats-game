@@ -31,6 +31,7 @@ public class HealthModuleController : ModuleControllerAbstract
     public void TurnOnHeal()
     {
         TurnedOn = true;
+        CinemachineEffectsController.instance.ShakeCamera(5, 5, 0.2f);
         OnDeactivated?.Invoke(_healPercent, _cooldown, _effect);
         SendMessage(_brokenMessage);
 

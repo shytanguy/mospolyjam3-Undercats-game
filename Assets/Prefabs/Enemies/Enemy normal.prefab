@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 817026193630783086}
   - component: {fileID: 5165220486588294101}
   - component: {fileID: 6067978961365362313}
+  - component: {fileID: 7587922450105693518}
   m_Layer: 6
   m_Name: Enemy normal
   m_TagString: Untagged
@@ -230,9 +231,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6efbe980fcacb05488230eb39c98a23a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <_maxHealth>k__BackingField: 100
+  <_maxHealth>k__BackingField: 15
   _damageCoolDownEnabled: 0
   _invincibilityDelay: 0.5
+  _damageSound: {fileID: 8300000, guid: 9cd9724df7f455b4693025dad2126433, type: 3}
 --- !u!114 &1312550688745560632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -316,6 +318,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a678a0d976e145049bbc6175c3dbeb05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7587922450105693518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1264280626853292700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a38e033bcaaf034999e683a3c17cd55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _walkEffect: {fileID: 0}
+  _walkSounds:
+  - {fileID: 8300000, guid: 7f9f738e67450b74b951bdb9aaec4352, type: 3}
+  - {fileID: 8300000, guid: 9a678556f060cb444a1d05dfbf92f1f8, type: 3}
+  _attack: {fileID: 8300000, guid: 9cd9724df7f455b4693025dad2126433, type: 3}
 --- !u!1 &5863346491934466112
 GameObject:
   m_ObjectHideFlags: 0

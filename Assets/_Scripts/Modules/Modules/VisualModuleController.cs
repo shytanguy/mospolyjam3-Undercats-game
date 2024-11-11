@@ -27,6 +27,7 @@ public class VisualModuleController : ModuleControllerAbstract
     public  void TurnOffGraphics()
     {
         OnDeactivated?.Invoke();
+        CinemachineEffectsController.instance.ShakeCamera(5, 5, 0.2f);
         SendMessage(_brokenMessage);
     }
 }

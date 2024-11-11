@@ -39,6 +39,7 @@ public class TemperatureModuleController : ModuleControllerAbstract
     {
        
         TurnedOn = true;
+        CinemachineEffectsController.instance.ShakeCamera(5, 5, 0.2f);
         OnDeactivated?.Invoke(_burnPercent, _cooldown, _effect);
         SendMessage(_brokenMessage);
     }

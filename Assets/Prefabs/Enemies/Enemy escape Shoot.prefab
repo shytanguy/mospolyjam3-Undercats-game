@@ -157,6 +157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _fadeDuration: 0.5
   _originalSprite: {fileID: 1763431113231575653}
+  _overlayOriginalSprite: 0
 --- !u!210 &4625711357247753078
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -318,6 +319,7 @@ GameObject:
   - component: {fileID: 1569430418694215884}
   - component: {fileID: 3553735219544069341}
   - component: {fileID: 2500249449507321666}
+  - component: {fileID: 485507260108030547}
   m_Layer: 6
   m_Name: Enemy escape Shoot
   m_TagString: Untagged
@@ -483,9 +485,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6efbe980fcacb05488230eb39c98a23a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <_maxHealth>k__BackingField: 100
+  <_maxHealth>k__BackingField: 15
   _damageCoolDownEnabled: 0
   _invincibilityDelay: 0.5
+  _damageSound: {fileID: 8300000, guid: 9cd9724df7f455b4693025dad2126433, type: 3}
 --- !u!114 &770504274718011004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -608,6 +611,23 @@ MonoBehaviour:
   _animationName: special
   _projectile: {fileID: -1654311412418883196, guid: 085984ddeec3eea4f968fefd42c8c161, type: 3}
   _animationTime: 1
+--- !u!114 &485507260108030547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8670335159799042588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a38e033bcaaf034999e683a3c17cd55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _walkEffect: {fileID: 0}
+  _walkSounds:
+  - {fileID: 8300000, guid: 7f9f738e67450b74b951bdb9aaec4352, type: 3}
+  - {fileID: 8300000, guid: 9a678556f060cb444a1d05dfbf92f1f8, type: 3}
+  _attack: {fileID: 8300000, guid: 9cd9724df7f455b4693025dad2126433, type: 3}
 --- !u!1001 &4044120408941544076
 PrefabInstance:
   m_ObjectHideFlags: 0

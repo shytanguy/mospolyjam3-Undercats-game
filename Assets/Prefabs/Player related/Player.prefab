@@ -382,9 +382,9 @@ MonoBehaviour:
   stateKey: 2
   startingState: 0
   <stateType>k__BackingField: 1
-  _TimeBeforeSwitchState: 0.7
-  _TimeBeforeInput: 0.5
-  _HitBoxSpawnDelay: 0.2
+  _TimeBeforeSwitchState: 0.5
+  _TimeBeforeInput: 0.3
+  _HitBoxSpawnDelay: 0.24
   _damage: 5
   _hitBoxDimensions: {x: 0.6, y: 1.5}
   _hitBoxOffset: {x: 0.5, y: 0}
@@ -398,6 +398,7 @@ MonoBehaviour:
   _timeZoom: 0.5
   _timePerZoom: 0.2
   _zoomPercent: 1.15
+  _parry: {fileID: 8300000, guid: 682a55438a785414490e7cb2f966d62e, type: 3}
   _counterDamageMultiplier: 2
 --- !u!114 &3932596944697421843
 MonoBehaviour:
@@ -414,8 +415,8 @@ MonoBehaviour:
   stateKey: 3
   startingState: 0
   <stateType>k__BackingField: 1
-  _TimeBeforeSwitchState: 0.7
-  _TimeBeforeInput: 0.5
+  _TimeBeforeSwitchState: 0.5
+  _TimeBeforeInput: 0.25
   _HitBoxSpawnDelay: 0.2
   _damage: 5
   _hitBoxDimensions: {x: 1.2, y: 1.19}
@@ -430,6 +431,7 @@ MonoBehaviour:
   _timeZoom: 0.5
   _timePerZoom: 0.2
   _zoomPercent: 1.15
+  _parry: {fileID: 8300000, guid: 682a55438a785414490e7cb2f966d62e, type: 3}
   _counterDamageMultiplier: 2
 --- !u!114 &963171509599222599
 MonoBehaviour:
@@ -462,6 +464,7 @@ MonoBehaviour:
   _timeZoom: 0.5
   _timePerZoom: 0.2
   _zoomPercent: 1.15
+  _parry: {fileID: 8300000, guid: 682a55438a785414490e7cb2f966d62e, type: 3}
   _counterDamageMultiplier: 2
 --- !u!114 &3057474037992505414
 MonoBehaviour:
@@ -567,8 +570,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _walkEffect: {fileID: 0}
-  _walkSounds: []
-  _attackSounds: []
+  _walkSounds:
+  - {fileID: 8300000, guid: 59e329b6128fbe94b881c3acc8d1fe00, type: 3}
+  - {fileID: 8300000, guid: 93e6c0724ac32ea41b6b7b2604f35089, type: 3}
+  _attackSounds:
+  - {fileID: 8300000, guid: 63a2c552d85b01241b655e2344987801, type: 3}
+  - {fileID: 8300000, guid: 8be159b0dd3e79b499f4efb08656bdfe, type: 3}
+  _dash: {fileID: 8300000, guid: 2803c19448b2f734089fedb9f1e26eb2, type: 3}
 --- !u!114 &1306710873450962351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -581,7 +589,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b861d5b4293ffc4e87234ff12c2bf8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _healSound: {fileID: 0}
+  _healSound: {fileID: 8300000, guid: 5c9d31f32058b8746965e80a5b7836a2, type: 3}
   _TurnedOnOnStart: 0
   _additionalHeal: 0
 --- !u!114 &6042482369162175598
@@ -596,7 +604,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bd459ce30b6a514aa52aebdcfbf4608, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _burnSound: {fileID: 0}
+  _burnSound: {fileID: 8300000, guid: 2dc2784bfcda8a742a489bc6c4358455, type: 3}
   _additionalDamage: 0
   _activeOnStart: 0
 --- !u!114 &4503498952442527148
