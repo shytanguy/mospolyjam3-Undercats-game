@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4656eea2d4c33f4289fab69946ebca4, type: 3}
   m_Name: Heal ability
   m_EditorClassIdentifier: 
-  <Icon>k__BackingField: {fileID: 21300000, guid: 77cad498786ee754ab63fcb0e1114042, type: 3}
+  <Icon>k__BackingField: {fileID: -3015200091239744399, guid: 326af9eadb9e22b4e9219c8203f04b23, type: 3}
   <Name>k__BackingField: Health module
   <_color>k__BackingField: {r: 0.35395512, g: 0.82641506, b: 0.3724106, a: 1}
   <useOnceOnSpawn>k__BackingField: 1

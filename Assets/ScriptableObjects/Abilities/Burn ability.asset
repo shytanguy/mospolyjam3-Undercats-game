@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 290bc7acc16d42247a3b48b4948d08e7, type: 3}
   m_Name: Burn ability
   m_EditorClassIdentifier: 
-  <Icon>k__BackingField: {fileID: 21300000, guid: e7bb0f0a9f02e19439aca80485914b1a, type: 3}
+  <Icon>k__BackingField: {fileID: -4062769898107646306, guid: 326af9eadb9e22b4e9219c8203f04b23, type: 3}
   <Name>k__BackingField: temperature module
   <_color>k__BackingField: {r: 0.82641506, g: 0.3290067, b: 0.3290067, a: 1}
   <useOnceOnSpawn>k__BackingField: 1

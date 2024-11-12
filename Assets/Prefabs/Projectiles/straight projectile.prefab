@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6117806103371748521}
   - component: {fileID: 7343184577277632244}
   - component: {fileID: 7038983757698165146}
+  - component: {fileID: -450042945563521421}
   m_Layer: 7
   m_Name: straight projectile
   m_TagString: Untagged
@@ -221,3 +222,16 @@ MonoBehaviour:
   _TimeBeforeDeleted: 10
   _duration: 0.3
   _destroyInstantly: 0
+--- !u!114 &-450042945563521421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3992092977537251436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d52655969bef684299eb4c89ec91a6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _soundOnSpawn: {fileID: 8300000, guid: 475bfd4f7f6f4ef478bc48ab28733e63, type: 3}

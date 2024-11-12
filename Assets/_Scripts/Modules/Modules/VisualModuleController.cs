@@ -8,6 +8,9 @@ public class VisualModuleController : ModuleControllerAbstract
     public static event Action OnDeactivated;
 
     public static event Action OnActivated;
+
+    [SerializeField] private AudioClip _activateSound;
+    [SerializeField] private AudioClip _deactivateSound;
     private void Awake()
     {
         if (instance == null)
@@ -22,12 +25,15 @@ public class VisualModuleController : ModuleControllerAbstract
     public  void TurnOnGraphics()
     {
         OnActivated?.Invoke();
+        CinemachineEffectsController.instance.ShakeCamera(5, 5, 0.3f);
+        AudioManager.audioManager.PlaySound(_deactivateSound);
         SendMessage(_fixedMessage);
     }
     public  void TurnOffGraphics()
     {
         OnDeactivated?.Invoke();
-        CinemachineEffectsController.instance.ShakeCamera(5, 5, 0.2f);
+        CinemachineEffectsController.instance.ShakeCamera(5, 5, 0.3f);
+        AudioManager.audioManager.PlaySound(_activateSound);
         SendMessage(_brokenMessage);
     }
 }

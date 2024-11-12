@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerAbilitySwitcher : MonoBehaviour
 {
-    [SerializeField] private List<AbilityAbstract> _playerAbilities = new List<AbilityAbstract>();
+    public List<AbilityAbstract> _playerAbilities { get; private set; } = new List<AbilityAbstract>();
 
     private AbilityAbstract _currentAbility;
 
@@ -33,7 +33,10 @@ public class PlayerAbilitySwitcher : MonoBehaviour
     public void AddAbility(AbilityAbstract ability)
     {
         if (_playerAbilities.Contains(ability)) return;
+        
         _playerAbilities.Add(ability);
+        _currentAbility = _playerAbilities.Find(i => i == ability);
+        OnSwitchingAbility?.Invoke(ability);
         OnNewAbility?.Invoke(ability);
     }
     private void SwitchAbilityInput(InputAction.CallbackContext context)
@@ -43,19 +46,24 @@ public class PlayerAbilitySwitcher : MonoBehaviour
     }
     private void Start()
     {
-        if (_playerAbilities!=null)
+        if (_playerAbilities!=null&&_playerAbilities.Count>0)
         _currentAbility = _playerAbilities[0];
 
         SwitchAbility();
     }
     public AbilityAbstract GetNextAbility()
     {
+        if (_playerAbilities.Count <= 1)
+        {
+            return null;
+        }
+        
         return _playerAbilities[(_playerAbilities.IndexOf(_currentAbility) + 1) % _playerAbilities.Count];
     }
     private void SwitchAbility()
     {
 
-        
+        if (_playerAbilities.Count <= 1) return;
         _currentAbility = _playerAbilities[(_playerAbilities.IndexOf(_currentAbility) + 1) % _playerAbilities.Count];
 
         OnSwitchingAbility?.Invoke(_currentAbility);
@@ -63,6 +71,7 @@ public class PlayerAbilitySwitcher : MonoBehaviour
 
   public void UseAbility()
     {
+        if (_currentAbility == null) return;
        ParticleSystem.MainModule particle= Instantiate(_particle, transform.position, Quaternion.identity).main;
         particle.startColor = _currentAbility._color;
         _currentAbility.UseAbility();

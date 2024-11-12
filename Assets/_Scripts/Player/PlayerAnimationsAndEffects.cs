@@ -15,6 +15,8 @@ public class PlayerAnimationsAndEffects : MonoBehaviour
 
     [SerializeField] private AudioClip _dash;
 
+    
+
     private PlayerStatesManager.PlayerStates _currentKey;
     private void Awake()
     {

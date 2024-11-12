@@ -17,6 +17,8 @@ public class GetAbilityObject : MonoBehaviour
                 collision.gameObject.GetComponent<PlayerAbilitySwitcher>().AddAbility(ability);
 
                 AudioManager.audioManager.PlaySound(_sound);
+
+                Destroy(gameObject);
             }
         }
     }

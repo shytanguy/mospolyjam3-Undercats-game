@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afa9e59ff6ba444478b2764f1c69099f, type: 3}
   m_Name: Chaos ability
   m_EditorClassIdentifier: 
-  <Icon>k__BackingField: {fileID: 21300000, guid: fab4236f385431d42b1b86df1456240d, type: 3}
+  <Icon>k__BackingField: {fileID: 8811115329238573457, guid: 326af9eadb9e22b4e9219c8203f04b23, type: 3}
   <Name>k__BackingField: "\u0425\u0430\u043E\u0441"
   <_color>k__BackingField: {r: 0.70486474, g: 0.20486288, b: 0.78113204, a: 1}
   <useOnceOnSpawn>k__BackingField: 1

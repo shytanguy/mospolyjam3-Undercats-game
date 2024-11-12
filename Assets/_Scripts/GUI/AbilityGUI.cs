@@ -37,9 +37,14 @@ public class AbilityGUI : MonoBehaviour
     private void OnEnable()
     {
         if (_playerAbilitySwitcher == null) return;
-
+      
         _playerAbilitySwitcher.OnSwitchingAbility += AnimateAbilitySwitch;
-
+        if (_playerAbilitySwitcher._playerAbilities.Count == 0)
+        {
+            _nextAbilityIcon.transform.parent.gameObject.SetActive(false);
+            _currentAbilityIcon.gameObject.transform.parent.gameObject.SetActive(false);
+            return;
+        }
         UpdateAbilityDisplay(_playerAbilitySwitcher.GetNextAbility());
     }
 
@@ -53,7 +58,8 @@ public class AbilityGUI : MonoBehaviour
     private void UpdateAbilityDisplay(AbilityAbstract newAbility)
     {
         if (newAbility == null) return;
-
+     
+        _currentAbilityIcon.gameObject.transform.parent.gameObject.SetActive(true);
         _currentAbilityIcon.sprite = newAbility.Icon;
 
         _currentAbilityName.text = newAbility.Name;
@@ -61,10 +67,12 @@ public class AbilityGUI : MonoBehaviour
         AbilityAbstract nextAbility = _playerAbilitySwitcher.GetNextAbility();
         if (nextAbility != null)
         {
+            _nextAbilityIcon.transform.parent.gameObject.SetActive(true);
             _nextAbilityIcon.sprite = nextAbility.Icon;
         }
         else
         {
+            _nextAbilityIcon.transform.parent.gameObject.SetActive(false);
             _nextAbilityIcon.sprite = null;
         }
     }

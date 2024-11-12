@@ -16,6 +16,9 @@ public class ChaosModuleController : ModuleControllerAbstract
 
     public static event Action<GameObject, Vector3> OnActivated;
 
+    [SerializeField] private AudioClip _activateSound;
+    [SerializeField] private AudioClip _deactivateSound;
+
     public static bool TurnedOn = false;
     private void Awake()
     {
@@ -42,14 +45,16 @@ public class ChaosModuleController : ModuleControllerAbstract
         {
 
             yield return new WaitForSeconds(_TimeBetweenSpawns);
-            CinemachineEffectsController.instance.ShakeCamera(5, 5, 0.35f);
+            CinemachineEffectsController.instance.ShakeCamera(5, 5, 0.5f);
+            AudioManager.audioManager.PlaySound(_activateSound);
             OnActivated?.Invoke(_prefabSpawning, _spawnOffset);
         }
     }
     public void TurnOffChaos()
     {
         TurnedOn = false;
-        CinemachineEffectsController.instance.ShakeCamera(5, 5, 0.2f);
+        CinemachineEffectsController.instance.ShakeCamera(5, 5, 0.3f);
+        AudioManager.audioManager.PlaySound(_deactivateSound);
         OnDeactivated?.Invoke();
         SendMessage(_fixedMessage);
        

@@ -12,6 +12,8 @@ public class GameMenuController : MonoBehaviour
 
     private PlayerComponentsManager playerComponents;
 
+    [SerializeField] private AudioClip _deathSound;
+
     private void Awake()
     {
         if (instance == null)
@@ -66,6 +68,7 @@ public class GameMenuController : MonoBehaviour
 
     public void ShowDeathMenu()
     {
+        AudioManager.audioManager.PlaySound(_deathSound);
         deathMenu.SetActive(true);
         TimeController.StopTime(this);
     }

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5437166007606576055}
   - component: {fileID: 6348038789573152262}
   - component: {fileID: -4338139232223758454}
+  - component: {fileID: -7357683210715601868}
   m_Layer: 0
   m_Name: spawner projectile
   m_TagString: Untagged
@@ -131,3 +132,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-7357683210715601868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3992092977537251436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d52655969bef684299eb4c89ec91a6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _soundOnSpawn: {fileID: 8300000, guid: cbaa2b8a012af3144ab96c8e227c2c92, type: 3}

@@ -17,6 +17,9 @@ public class TemperatureModuleController : ModuleControllerAbstract
     [field:SerializeField] public float _burnPercent { get; private set; } = 0.05f;
 
     [field: SerializeField] public float _cooldown { get; private set; } = 1f;
+
+    [SerializeField] private AudioClip _activateSound;
+    [SerializeField] private AudioClip _deactivateSound;
     private void Awake()
     {
         if (instance == null)
@@ -32,14 +35,16 @@ public class TemperatureModuleController : ModuleControllerAbstract
     {
         TurnedOn = false;
         OnActivated?.Invoke();
-        CinemachineEffectsController.instance.ShakeCamera(5, 5, 0.2f);
+        AudioManager.audioManager.PlaySound(_deactivateSound);
+        CinemachineEffectsController.instance.ShakeCamera(5, 5, 0.3f);
         SendMessage(_fixedMessage);
     }
     public void TurnOnTemperature()
     {
        
         TurnedOn = true;
-        CinemachineEffectsController.instance.ShakeCamera(5, 5, 0.2f);
+        CinemachineEffectsController.instance.ShakeCamera(5, 5, 0.3f);
+        AudioManager.audioManager.PlaySound(_activateSound);
         OnDeactivated?.Invoke(_burnPercent, _cooldown, _effect);
         SendMessage(_brokenMessage);
     }

@@ -45,6 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 0}
-  mainMenu: {fileID: 0}
   deathMenu: {fileID: 0}
   player: {fileID: 0}
+  _deathSound: {fileID: 8300000, guid: 36809e7a50566d943812fef0ba15e5e7, type: 3}

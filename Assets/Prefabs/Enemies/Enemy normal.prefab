@@ -274,8 +274,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dropItemOnDeathPrefab: {fileID: 0}
-  _deathClip: {fileID: 0}
+  _deathClip: {fileID: 8300000, guid: 511841e24ffebdf498248728915f7f79, type: 3}
   _deathParticle: {fileID: 904849491935966210, guid: 5034fd565751a014cb87539680d430e1, type: 3}
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &817026193630783086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -639,18 +642,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 5365667752974482614}
     m_Modifications:
     - target: {fileID: 1578015623519984880, guid: 786bfd0a0c1966141a4420eca18a709a, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.46967
-      objectReference: {fileID: 0}
-    - target: {fileID: 1578015623519984880, guid: 786bfd0a0c1966141a4420eca18a709a, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.46967
-      objectReference: {fileID: 0}
-    - target: {fileID: 1578015623519984880, guid: 786bfd0a0c1966141a4420eca18a709a, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.46967
-      objectReference: {fileID: 0}
-    - target: {fileID: 1578015623519984880, guid: 786bfd0a0c1966141a4420eca18a709a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -690,6 +681,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3556936154392532324, guid: 786bfd0a0c1966141a4420eca18a709a, type: 3}
+      propertyPath: _healthScript
+      value: 
+      objectReference: {fileID: 8741478717087912239}
     - target: {fileID: 8134571874356411413, guid: 786bfd0a0c1966141a4420eca18a709a, type: 3}
       propertyPath: m_Name
       value: HpBar
