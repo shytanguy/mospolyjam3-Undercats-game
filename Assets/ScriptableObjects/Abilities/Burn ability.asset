@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Icon>k__BackingField: {fileID: 21300000, guid: e7bb0f0a9f02e19439aca80485914b1a, type: 3}
   <Name>k__BackingField: temperature module
+  <_color>k__BackingField: {r: 0.82641506, g: 0.3290067, b: 0.3290067, a: 1}
   <useOnceOnSpawn>k__BackingField: 1
   <cooldownTime>k__BackingField: 0

@@ -37,13 +37,21 @@ public  class PlayerAttackState : PlayerAbstractState
     private bool _countered=false;
     [SerializeField] private AudioClip _parry;
     [SerializeField] private float _counterDamageMultiplier=1.2f;
+
+    [SerializeField] private float _moveSpeed=2f;
     public override void EnterState()
     {
+        StopAllCoroutines();
         _canInput = false;
-
+      
         StartCoroutine(HitBoxSpawnDelay());
-       
-        _componentsManager.playerRigidbody.velocity = transform.right.normalized;
+        _componentsManager.playerRigidbody.velocity = Vector2.zero;
+        Vector2 knockback1 = _knockbackDirection;
+        if (transform.rotation.eulerAngles.y != 0)
+        {
+            knockback1 = new Vector2(-knockback1.x, knockback1.y);
+        }
+        _componentsManager.playerRigidbody.velocity =_moveSpeed* knockback1;
         StartCoroutine(InputDelay());
 
         StartCoroutine(SwitchStateDelay());
@@ -52,28 +60,29 @@ public  class PlayerAttackState : PlayerAbstractState
     }
     public override void ExitState()
     {
+        StopAllCoroutines();
         _componentsManager.playerRigidbody.velocity = Vector2.zero;
         _componentsManager.playerInput.actions["Attack"].performed -= OnAttackInput;
     }
     private void OnAttackInput(InputAction.CallbackContext context)
     {
-        return;
+   
         if (!_canInput) return;
 
         Vector2 direction = _componentsManager.playerInput.actions["Move"].ReadValue<Vector2>();
 
         switch (direction.y)
         {
-            case 0: _StatesManager.SwitchState(PlayerStatesManager.PlayerStates.attackMiddle); break;
-            case (> 0): _StatesManager.SwitchState(PlayerStatesManager.PlayerStates.attackTop); break;
-            case (< 0): _StatesManager.SwitchState(PlayerStatesManager.PlayerStates.attackDown); break;
+            case 0: if (stateKey!=PlayerStatesManager.PlayerStates.attackMiddle) _StatesManager.SwitchState(PlayerStatesManager.PlayerStates.attackMiddle); break;
+            case (> 0): if (stateKey != PlayerStatesManager.PlayerStates.attackTop) _StatesManager.SwitchState(PlayerStatesManager.PlayerStates.attackTop); break;
+            case (< 0): if (stateKey != PlayerStatesManager.PlayerStates.attackDown) _StatesManager.SwitchState(PlayerStatesManager.PlayerStates.attackDown); break;
         }
     }
     public override void UpdateState()
     {
         if (!_canInput) return;
 
-        CheckWalkState();
+     //   CheckWalkState();
     }
     private void CheckWalkState()
     {
@@ -119,6 +128,7 @@ public  class PlayerAttackState : PlayerAbstractState
                 }
                 collider.GetComponent<Rigidbody2D>().AddForce(_knockbackForce * _knockbackDirection, ForceMode2D.Impulse);
             }
+         
             _countered = false;
         }
       

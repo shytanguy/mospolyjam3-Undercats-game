@@ -32,7 +32,7 @@ public class TemperatureModuleController : ModuleControllerAbstract
     {
         TurnedOn = false;
         OnActivated?.Invoke();
-
+        CinemachineEffectsController.instance.ShakeCamera(5, 5, 0.2f);
         SendMessage(_fixedMessage);
     }
     public void TurnOnTemperature()

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ArenaController : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class ArenaController : MonoBehaviour
     [SerializeField] private int _maxSpawned;
 
     private int _spawned;
+
+    public UnityEvent OnAllDefeated;
     public void StartSpawning()
     {
         foreach(var spawner in _spawners)
@@ -34,6 +37,10 @@ public class ArenaController : MonoBehaviour
         spawner.OnEnemyDefeated -= SpawnEnemy;
         _spawners.Remove(spawner);
         Destroy(spawner);
+        if (_spawners.Count == 0)
+        {
+            OnAllDefeated?.Invoke();
+        }
     }
     private void SpawnEnemy()
     {

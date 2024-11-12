@@ -49,6 +49,7 @@ public class ChaosModuleController : ModuleControllerAbstract
     public void TurnOffChaos()
     {
         TurnedOn = false;
+        CinemachineEffectsController.instance.ShakeCamera(5, 5, 0.2f);
         OnDeactivated?.Invoke();
         SendMessage(_fixedMessage);
        

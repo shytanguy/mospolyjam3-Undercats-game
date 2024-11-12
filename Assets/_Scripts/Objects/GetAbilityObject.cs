@@ -7,6 +7,7 @@ public class GetAbilityObject : MonoBehaviour
     [field: SerializeField] public AbilityAbstract ability { get; private set; }
 
     [SerializeField] private LayerMask _playerMask;
+    [SerializeField] private AudioClip _sound;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if ((_playerMask.value & (1 << collision.gameObject.layer)) > 0)

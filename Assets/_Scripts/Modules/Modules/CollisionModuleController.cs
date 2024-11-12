@@ -27,6 +27,7 @@ public class CollisionModuleController :ModuleControllerAbstract
     {
         TurnedOn = true;
         OnActivated?.Invoke();
+        CinemachineEffectsController.instance.ShakeCamera(5, 5, 0.2f);
         SendMessage(_fixedMessage);
     }
     public  void TurnOffCollision()

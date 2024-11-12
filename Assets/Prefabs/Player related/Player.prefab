@@ -190,6 +190,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5584791361790811636}
+  - {fileID: 7509122547019150123}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &6321369955079044859
@@ -401,6 +402,7 @@ MonoBehaviour:
   _zoomPercent: 1.15
   _parry: {fileID: 8300000, guid: 682a55438a785414490e7cb2f966d62e, type: 3}
   _counterDamageMultiplier: 2
+  _moveSpeed: 0.5
 --- !u!114 &3932596944697421843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -416,9 +418,9 @@ MonoBehaviour:
   stateKey: 3
   startingState: 0
   <stateType>k__BackingField: 1
-  _TimeBeforeSwitchState: 0.5
-  _TimeBeforeInput: 0.25
-  _HitBoxSpawnDelay: 0.2
+  _TimeBeforeSwitchState: 0.4
+  _TimeBeforeInput: 0.3
+  _HitBoxSpawnDelay: 0.24
   _damage: 5
   _hitBoxDimensions: {x: 1.2, y: 1.19}
   _hitBoxOffset: {x: 0.44, y: 0.4}
@@ -434,6 +436,7 @@ MonoBehaviour:
   _zoomPercent: 1.15
   _parry: {fileID: 8300000, guid: 682a55438a785414490e7cb2f966d62e, type: 3}
   _counterDamageMultiplier: 2
+  _moveSpeed: 0.5
 --- !u!114 &963171509599222599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -449,9 +452,9 @@ MonoBehaviour:
   stateKey: 4
   startingState: 0
   <stateType>k__BackingField: 1
-  _TimeBeforeSwitchState: 0.7
-  _TimeBeforeInput: 0.5
-  _HitBoxSpawnDelay: 0.2
+  _TimeBeforeSwitchState: 0.4
+  _TimeBeforeInput: 0.4
+  _HitBoxSpawnDelay: 0.26
   _damage: 2
   _hitBoxDimensions: {x: 1.17, y: 1.06}
   _hitBoxOffset: {x: 0.44, y: -0.41}
@@ -467,6 +470,7 @@ MonoBehaviour:
   _zoomPercent: 1.15
   _parry: {fileID: 8300000, guid: 682a55438a785414490e7cb2f966d62e, type: 3}
   _counterDamageMultiplier: 2
+  _moveSpeed: 0.5
 --- !u!114 &3057474037992505414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -484,6 +488,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 13608500dd2db8947a1fe4f8d008faec, type: 2}
   - {fileID: 11400000, guid: 99fbca902aff4544ea4ee2dbb519207d, type: 2}
   - {fileID: 11400000, guid: 82929a91a697cec4f8064c1cf5282aae, type: 2}
+  _particle: {fileID: 6775379593515491725, guid: 5079d811f74ee0a4bb12c62fdac0cde3, type: 3}
 --- !u!114 &6575447850596699351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -499,7 +504,7 @@ MonoBehaviour:
   stateKey: 6
   startingState: 0
   <stateType>k__BackingField: 2
-  _timeInState: 1
+  _timeInState: 0.1
 --- !u!114 &7029413426487427872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -621,6 +626,92 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a678a0d976e145049bbc6175c3dbeb05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &6906632628723652650
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7509122547019150123}
+  - component: {fileID: 8102381810433905720}
+  - component: {fileID: 5410338447821220549}
+  m_Layer: 4
+  m_Name: music
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7509122547019150123
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6906632628723652650}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 13.516, y: 13.516, z: 13.516}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5274598505645104287}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &8102381810433905720
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6906632628723652650}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.5
+--- !u!114 &5410338447821220549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6906632628723652650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71d3f4c29b8c1fb458e6e0a2ec722d20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemyLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  _combatMusic: {fileID: 8300000, guid: df2757b931d524c4886f7c5a89176896, type: 3}
+  _normalMusic: {fileID: 8300000, guid: ae5648764e8034c4cac439a4c2e91921, type: 3}
 --- !u!1 &8355220769099214019
 GameObject:
   m_ObjectHideFlags: 0

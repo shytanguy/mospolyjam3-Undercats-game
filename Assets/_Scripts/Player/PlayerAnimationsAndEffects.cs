@@ -58,8 +58,8 @@ public class PlayerAnimationsAndEffects : MonoBehaviour
             case PlayerStatesManager.PlayerStates.attackMiddle:
                 _components.playerAnimator.Play("attackMid");
                 AudioManager.audioManager.PlaySound(_attackSounds[UnityEngine.Random.Range(0, _attackSounds.Length)]); break;
-            case PlayerStatesManager.PlayerStates.attackTop: AudioManager.audioManager.PlaySound(_attackSounds[UnityEngine.Random.Range(0, _attackSounds.Length)]); break;
-            case PlayerStatesManager.PlayerStates.attackDown: AudioManager.audioManager.PlaySound(_attackSounds[UnityEngine.Random.Range(0, _attackSounds.Length)]); break;
+            case PlayerStatesManager.PlayerStates.attackTop: _components.playerAnimator.Play("attackTop"); AudioManager.audioManager.PlaySound(_attackSounds[UnityEngine.Random.Range(0, _attackSounds.Length)]); break;
+            case PlayerStatesManager.PlayerStates.attackDown: _components.playerAnimator.Play("attackDown"); AudioManager.audioManager.PlaySound(_attackSounds[UnityEngine.Random.Range(0, _attackSounds.Length)]); break;
 
         }
        

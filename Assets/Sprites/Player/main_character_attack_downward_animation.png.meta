@@ -1,0 +1,640 @@
+fileFormatVersion: 2
+guid: 22f730041db40a145a0069842c2e6d34
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8550954821117744190
+    second: main_character_attack_downward_animation_0
+  - first:
+      213: 3585489707563546819
+    second: main_character_attack_downward_animation_1
+  - first:
+      213: 8046112971826755924
+    second: main_character_attack_downward_animation_2
+  - first:
+      213: -7772517809590721429
+    second: main_character_attack_downward_animation_3
+  - first:
+      213: -4683348150562928374
+    second: main_character_attack_downward_animation_4
+  - first:
+      213: -8316354248929101566
+    second: main_character_attack_downward_animation_5
+  - first:
+      213: -569149548169720905
+    second: main_character_attack_downward_animation_6
+  - first:
+      213: -8434833040486753349
+    second: main_character_attack_downward_animation_7
+  - first:
+      213: 1833967635035042366
+    second: main_character_attack_downward_animation_8
+  - first:
+      213: 6945084522675216805
+    second: main_character_attack_downward_animation_9
+  - first:
+      213: -5743348077443175813
+    second: main_character_attack_downward_animation_10
+  - first:
+      213: -8731261904351650222
+    second: main_character_attack_downward_animation_11
+  - first:
+      213: 8021839512834504004
+    second: main_character_attack_downward_animation_12
+  - first:
+      213: -7274127369470829133
+    second: main_character_attack_downward_animation_13
+  - first:
+      213: -3935564834145331901
+    second: main_character_attack_downward_animation_14
+  - first:
+      213: 2160011941572957509
+    second: main_character_attack_downward_animation_15
+  - first:
+      213: 2744013606202467737
+    second: main_character_attack_downward_animation_16
+  - first:
+      213: 7872407419076590161
+    second: main_character_attack_downward_animation_17
+  - first:
+      213: -4707058711150465205
+    second: main_character_attack_downward_animation_18
+  - first:
+      213: -3420020038818173249
+    second: main_character_attack_downward_animation_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: main_character_attack_downward_animation_0
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 25
+        width: 38
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cbecd425e7e45980800000000000000
+      internalID: -8550954821117744190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_character_attack_downward_animation_1
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 25
+        width: 53
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c8f42d64e732c130800000000000000
+      internalID: 3585489707563546819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_character_attack_downward_animation_2
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 25
+        width: 59
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45975642e1989af60800000000000000
+      internalID: 8046112971826755924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_character_attack_downward_animation_3
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 25
+        width: 59
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b64a2f49b38722490800000000000000
+      internalID: -7772517809590721429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_character_attack_downward_animation_4
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 25
+        width: 62
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a09c636aba7610fb0800000000000000
+      internalID: -4683348150562928374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_character_attack_downward_animation_5
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 25
+        width: 89
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 209354e5fdf569c80800000000000000
+      internalID: -8316354248929101566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_character_attack_downward_animation_6
+      rect:
+        serializedVersion: 2
+        x: 957
+        y: 25
+        width: 89
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bb054d5089f918f0800000000000000
+      internalID: -569149548169720905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_character_attack_downward_animation_7
+      rect:
+        serializedVersion: 2
+        x: 1111
+        y: 25
+        width: 89
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbb1f021a0471fa80800000000000000
+      internalID: -8434833040486753349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_character_attack_downward_animation_8
+      rect:
+        serializedVersion: 2
+        x: 1265
+        y: 25
+        width: 89
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e32b3d7e8df837910800000000000000
+      internalID: 1833967635035042366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_character_attack_downward_animation_9
+      rect:
+        serializedVersion: 2
+        x: 1419
+        y: 25
+        width: 89
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a1ae15a395e16060800000000000000
+      internalID: 6945084522675216805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_character_attack_downward_animation_10
+      rect:
+        serializedVersion: 2
+        x: 1573
+        y: 25
+        width: 89
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7aa3966a578b40b0800000000000000
+      internalID: -5743348077443175813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_character_attack_downward_animation_11
+      rect:
+        serializedVersion: 2
+        x: 1727
+        y: 25
+        width: 89
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25e1836ee8354d680800000000000000
+      internalID: -8731261904351650222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_character_attack_downward_animation_12
+      rect:
+        serializedVersion: 2
+        x: 1881
+        y: 25
+        width: 117
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44571bf098c435f60800000000000000
+      internalID: 8021839512834504004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_character_attack_downward_animation_13
+      rect:
+        serializedVersion: 2
+        x: 2035
+        y: 25
+        width: 116
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bd9ebb82bb1d0b90800000000000000
+      internalID: -7274127369470829133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_character_attack_downward_animation_14
+      rect:
+        serializedVersion: 2
+        x: 2189
+        y: 25
+        width: 116
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3459f3682a01269c0800000000000000
+      internalID: -3935564834145331901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_character_attack_downward_animation_15
+      rect:
+        serializedVersion: 2
+        x: 2343
+        y: 10
+        width: 116
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 545de08aa67e9fd10800000000000000
+      internalID: 2160011941572957509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_character_attack_downward_animation_16
+      rect:
+        serializedVersion: 2
+        x: 2497
+        y: 4
+        width: 116
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 995698026d1b41620800000000000000
+      internalID: 2744013606202467737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_character_attack_downward_animation_17
+      rect:
+        serializedVersion: 2
+        x: 2651
+        y: 4
+        width: 116
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15ab53d76d8604d60800000000000000
+      internalID: 7872407419076590161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_character_attack_downward_animation_18
+      rect:
+        serializedVersion: 2
+        x: 2805
+        y: 4
+        width: 116
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4fe7f09a0b2daeb0800000000000000
+      internalID: -4707058711150465205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_character_attack_downward_animation_19
+      rect:
+        serializedVersion: 2
+        x: 2959
+        y: 9
+        width: 59
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbe668d05e5a980d0800000000000000
+      internalID: -3420020038818173249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      main_character_attack_downward_animation_0: -8550954821117744190
+      main_character_attack_downward_animation_1: 3585489707563546819
+      main_character_attack_downward_animation_10: -5743348077443175813
+      main_character_attack_downward_animation_11: -8731261904351650222
+      main_character_attack_downward_animation_12: 8021839512834504004
+      main_character_attack_downward_animation_13: -7274127369470829133
+      main_character_attack_downward_animation_14: -3935564834145331901
+      main_character_attack_downward_animation_15: 2160011941572957509
+      main_character_attack_downward_animation_16: 2744013606202467737
+      main_character_attack_downward_animation_17: 7872407419076590161
+      main_character_attack_downward_animation_18: -4707058711150465205
+      main_character_attack_downward_animation_19: -3420020038818173249
+      main_character_attack_downward_animation_2: 8046112971826755924
+      main_character_attack_downward_animation_3: -7772517809590721429
+      main_character_attack_downward_animation_4: -4683348150562928374
+      main_character_attack_downward_animation_5: -8316354248929101566
+      main_character_attack_downward_animation_6: -569149548169720905
+      main_character_attack_downward_animation_7: -8434833040486753349
+      main_character_attack_downward_animation_8: 1833967635035042366
+      main_character_attack_downward_animation_9: 6945084522675216805
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

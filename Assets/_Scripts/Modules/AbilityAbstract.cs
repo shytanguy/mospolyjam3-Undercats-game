@@ -8,6 +8,7 @@ public abstract class AbilityAbstract : ScriptableObject
 
     [field: SerializeField] public string Name { get; private set; }
 
+    [field: SerializeField] public Color _color { get; private set; }
 
 
     [field: SerializeField] public bool useOnceOnSpawn { get; private set; }

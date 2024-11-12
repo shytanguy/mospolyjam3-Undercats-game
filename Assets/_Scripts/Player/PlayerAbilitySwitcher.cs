@@ -15,6 +15,9 @@ public class PlayerAbilitySwitcher : MonoBehaviour
     private PlayerComponentsManager _componentsManager;
 
     public event Action<AbilityAbstract> OnNewAbility;
+
+    [SerializeField] private ParticleSystem _particle;
+
     private void Awake()
     {
         _componentsManager = GetComponent<PlayerComponentsManager>();
@@ -60,6 +63,8 @@ public class PlayerAbilitySwitcher : MonoBehaviour
 
   public void UseAbility()
     {
+       ParticleSystem.MainModule particle= Instantiate(_particle, transform.position, Quaternion.identity).main;
+        particle.startColor = _currentAbility._color;
         _currentAbility.UseAbility();
     }
 }

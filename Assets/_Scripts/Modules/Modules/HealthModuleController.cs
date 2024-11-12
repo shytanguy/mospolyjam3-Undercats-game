@@ -39,7 +39,7 @@ public class HealthModuleController : ModuleControllerAbstract
     public void TurnOffHeal()
     {
         TurnedOn = false;
-     
+        CinemachineEffectsController.instance.ShakeCamera(5, 5, 0.2f);
         OnActivated?.Invoke();
         SendMessage(_fixedMessage);
     }

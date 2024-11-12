@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EnemyDeathScript : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class EnemyDeathScript : MonoBehaviour
     [SerializeField] private AudioClip _deathClip;
     [SerializeField] private GameObject _deathParticle;
 
-   
+    public UnityEvent OnDeath;
     private void Awake()
     {
         _healthScript = GetComponent<HealthScript>();
@@ -24,6 +25,7 @@ public class EnemyDeathScript : MonoBehaviour
 
     private void Death()
     {
+        OnDeath?.Invoke();
         if (_dropItemOnDeathPrefab != null)
         {
             Instantiate(_dropItemOnDeathPrefab, transform.position, transform.rotation);
