@@ -13,6 +13,8 @@ public class CombatMusicController : MonoBehaviour
     [SerializeField] private AudioClip _normalMusic;
 
     private int _enemies;
+
+    private bool _coroutineStarted;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if ((_enemyLayers.value & (1 << collision.gameObject.layer)) > 0)
@@ -29,7 +31,7 @@ public class CombatMusicController : MonoBehaviour
             _enemies--;
             if (_enemies <= 0)
             {
-                SetNormalMusic();
+                StartCoroutine(SetNormalMusicDelay());
             }
            
         }
@@ -39,6 +41,17 @@ public class CombatMusicController : MonoBehaviour
         if (_combat == false) return;
         _combat = false;
         AudioManager.audioManager.ChangeMusic(_normalMusic);
+    }
+    private IEnumerator SetNormalMusicDelay()
+    {
+        if (_coroutineStarted) yield break;
+        _coroutineStarted = true;
+        yield return new WaitForSeconds(2f);
+        if (_enemies <= 0)
+        {
+            SetNormalMusic();
+        }
+        _coroutineStarted = false;
     }
     private void SetCombatMusic()
     {

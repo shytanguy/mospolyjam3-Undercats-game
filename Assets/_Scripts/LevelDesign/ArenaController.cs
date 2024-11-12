@@ -36,7 +36,7 @@ public class ArenaController : MonoBehaviour
         spawner.onAllEnemiesDestroyed -= (() => RemoveSpawner(spawner));
         spawner.OnEnemyDefeated -= SpawnEnemy;
         _spawners.Remove(spawner);
-        Destroy(spawner);
+        Destroy(spawner.gameObject);
         if (_spawners.Count == 0)
         {
             OnAllDefeated?.Invoke();

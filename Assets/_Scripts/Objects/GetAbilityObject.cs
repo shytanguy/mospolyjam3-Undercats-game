@@ -12,8 +12,12 @@ public class GetAbilityObject : MonoBehaviour
     {
         if ((_playerMask.value & (1 << collision.gameObject.layer)) > 0)
         {
-            if (ability!=null)
-            collision.gameObject.GetComponent<PlayerAbilitySwitcher>().AddAbility(ability);
+            if (ability != null)
+            {
+                collision.gameObject.GetComponent<PlayerAbilitySwitcher>().AddAbility(ability);
+
+                AudioManager.audioManager.PlaySound(_sound);
+            }
         }
     }
 }

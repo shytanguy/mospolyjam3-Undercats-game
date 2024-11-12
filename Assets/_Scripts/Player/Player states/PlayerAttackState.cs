@@ -139,10 +139,10 @@ public  class PlayerAttackState : PlayerAbstractState
         AudioManager.audioManager.PlaySound(_parry);
         _componentsManager.overlayScript.OverlayColorWhite();
         Instantiate(_counterEffectPrefab, transform.position, Quaternion.identity);
-        TimeController.SetTimeScale(0.7f, this);
+    
         CinemachineEffectsController.instance.ZoomCamera(_timePerZoom, _zoomPercent,_timeZoom);
         _countered = true;
-        StartCoroutine(ResumeTimeCounter());
+      
     }
     private IEnumerator ResumeTimeCounter()
     {

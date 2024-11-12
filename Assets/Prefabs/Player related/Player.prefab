@@ -79,7 +79,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 577394703785135454, guid: 4d23fa346d2b4ca40ad9cd50d66a15a4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -711,7 +711,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   _combatMusic: {fileID: 8300000, guid: df2757b931d524c4886f7c5a89176896, type: 3}
-  _normalMusic: {fileID: 8300000, guid: ae5648764e8034c4cac439a4c2e91921, type: 3}
+  _normalMusic: {fileID: 8300000, guid: 80e0ae24702c8c248a0445c2bd720ba5, type: 3}
 --- !u!1 &8355220769099214019
 GameObject:
   m_ObjectHideFlags: 0

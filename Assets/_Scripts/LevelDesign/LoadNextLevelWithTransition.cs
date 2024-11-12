@@ -13,6 +13,7 @@ public class LoadNextLevelWithTransition : MonoBehaviour
     }
     private IEnumerator LoadOnTime()
     {
+        Transition.instance.TransitionOut();
         yield return new WaitForSecondsRealtime(Transition.instance.TimeTransitioning);
         SceneManager.LoadScene(_levelName);
     }

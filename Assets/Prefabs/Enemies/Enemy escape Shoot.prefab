@@ -249,7 +249,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 1929568673833943069, guid: d420aa6afd95a3c4bb0cd0bb8fb0f909, type: 3}
-  m_Color: {r: 1, g: 0.96516657, b: 0.80566037, a: 1}
+  m_Color: {r: 1, g: 0.81894207, b: 0.8039216, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -530,6 +530,9 @@ MonoBehaviour:
   _dropItemOnDeathPrefab: {fileID: 0}
   _deathClip: {fileID: 0}
   _deathParticle: {fileID: 904849491935966210, guid: 5034fd565751a014cb87539680d430e1, type: 3}
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &8115977078875613149
 MonoBehaviour:
   m_ObjectHideFlags: 0
