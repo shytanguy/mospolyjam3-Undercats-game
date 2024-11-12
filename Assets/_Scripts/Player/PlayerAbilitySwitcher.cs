@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerAbilitySwitcher : MonoBehaviour
 {
-    public List<AbilityAbstract> _playerAbilities { get; private set; } = new List<AbilityAbstract>();
+  [field:SerializeField]  public List<AbilityAbstract> _playerAbilities { get; private set; } = new List<AbilityAbstract>();
 
     private AbilityAbstract _currentAbility;
 
@@ -49,7 +49,7 @@ public class PlayerAbilitySwitcher : MonoBehaviour
         if (_playerAbilities!=null&&_playerAbilities.Count>0)
         _currentAbility = _playerAbilities[0];
 
-        SwitchAbility();
+        OnSwitchingAbility?.Invoke(_currentAbility);
     }
     public AbilityAbstract GetNextAbility()
     {

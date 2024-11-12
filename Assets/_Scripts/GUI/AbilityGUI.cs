@@ -39,10 +39,11 @@ public class AbilityGUI : MonoBehaviour
         if (_playerAbilitySwitcher == null) return;
       
         _playerAbilitySwitcher.OnSwitchingAbility += AnimateAbilitySwitch;
+        _nextAbilityIcon.transform.parent.gameObject.SetActive(false);
+        _currentAbilityIcon.gameObject.transform.parent.gameObject.SetActive(false);
         if (_playerAbilitySwitcher._playerAbilities.Count == 0)
         {
-            _nextAbilityIcon.transform.parent.gameObject.SetActive(false);
-            _currentAbilityIcon.gameObject.transform.parent.gameObject.SetActive(false);
+            
             return;
         }
         UpdateAbilityDisplay(_playerAbilitySwitcher.GetNextAbility());

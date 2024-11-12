@@ -211,6 +211,7 @@ GameObject:
   - component: {fileID: 5990723603132499503}
   - component: {fileID: 6731526253305261772}
   - component: {fileID: 2091939004702642496}
+  - component: {fileID: 7716022674069334710}
   m_Layer: 0
   m_Name: Swords
   m_TagString: Untagged
@@ -278,6 +279,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 10
+--- !u!114 &7716022674069334710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255242491717039470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d52655969bef684299eb4c89ec91a6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _soundOnSpawn: {fileID: 8300000, guid: 286e4e84432880d46bf746237437b5ea, type: 3}
 --- !u!1 &1514176328653592831
 GameObject:
   m_ObjectHideFlags: 0

@@ -1314,6 +1314,8 @@ MonoBehaviour:
     \u0412\u041E\u0421\u0421\u0422\u0410\u041D\u041E\u0412\u041B\u0415\u041D"
   _brokenMessage: "\u041E\u0428\u0418\u0411\u041A\u0410 \u0412 \u041C\u041E\u0414\u0423\u041B\u0415
     \u0412\u0418\u0417\u0423\u0410\u041B\u0410"
+  _activateSound: {fileID: 0}
+  _deactivateSound: {fileID: 0}
 --- !u!114 &463454650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1330,6 +1332,8 @@ MonoBehaviour:
     \u0412\u041E\u0421\u0421\u0422\u0410\u041D\u041E\u0412\u041B\u0415\u041D"
   _brokenMessage: "\u041E\u0428\u0418\u0411\u041A\u0410 \u0412 \u041C\u041E\u0414\u0423\u041B\u0415
     \u0421\u0422\u041E\u041B\u041A\u041D\u041E\u0412\u0415\u041D\u0418\u0419"
+  _activateSound: {fileID: 0}
+  _deactivateSound: {fileID: 0}
 --- !u!4 &463454651
 Transform:
   m_ObjectHideFlags: 0
@@ -1363,6 +1367,8 @@ MonoBehaviour:
     \u0416\u0418\u0417\u041D\u0418"
   <_effect>k__BackingField: {fileID: 2368138761651688692, guid: d6e771962a0cd1746b87d235eef74948, type: 3}
   <_healPercent>k__BackingField: 0.05
+  _activateSound: {fileID: 0}
+  _deactivateSound: {fileID: 0}
   <_cooldown>k__BackingField: 1
 --- !u!114 &463454653
 MonoBehaviour:
@@ -1383,6 +1389,8 @@ MonoBehaviour:
   <_effect>k__BackingField: {fileID: 2059420009303711797, guid: 6baae3cc0e99ef5428b281748c9c907f, type: 3}
   <_burnPercent>k__BackingField: 0.05
   <_cooldown>k__BackingField: 1
+  _activateSound: {fileID: 0}
+  _deactivateSound: {fileID: 0}
 --- !u!114 &463454654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1402,6 +1410,8 @@ MonoBehaviour:
   _prefabSpawning: {fileID: 3992092977537251436, guid: 575490c9546a53a4595fd70458cdf797, type: 3}
   _spawnOffset: {x: 0, y: 2, z: 0}
   _TimeBetweenSpawns: 4
+  _activateSound: {fileID: 0}
+  _deactivateSound: {fileID: 0}
 --- !u!4 &464937992 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4791686942701211115, guid: 3bdd2f706517e00479a78a512eab6acb, type: 3}
@@ -2558,6 +2568,15 @@ PrefabInstance:
     - target: {fileID: 6157405214180084464, guid: 09ee5d4a64e306b42865c80006c2e66a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8431155311984537420, guid: 09ee5d4a64e306b42865c80006c2e66a, type: 3}
+      propertyPath: _text
+      value: "\u0422\u044B \u0441\u043D\u043E\u0432\u0430 \u0437\u0434\u0435\u0441\u044C.
+        \u041D\u0435 \u043F\u043E\u043C\u043D\u0438\u0448\u044C \u043C\u0435\u043D\u044F?
+        \u041D\u0435\u0443\u0436\u0435\u043B\u0438 \u0442\u044B \u0432\u0441\u0435
+        \u0437\u0430\u0431\u044B\u043B \u0438 \u043F\u0440\u0438\u0434\u0435\u0442\u0441\u044F
+        \u043D\u0430\u0447\u0438\u043D\u0430\u0442\u044C \u0432\u0435\u0441\u044C
+        \u043D\u0430\u0448 \u043F\u0443\u0442\u044C \u0437\u0430\u043D\u043E\u0432\u043E?"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
