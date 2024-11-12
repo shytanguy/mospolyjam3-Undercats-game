@@ -35,7 +35,7 @@ public class ChaosModuleController : ModuleControllerAbstract
     {
         TurnedOn = true;
 
-        OnActivated?.Invoke(_prefabSpawning, _spawnOffset);
+      
         StartCoroutine(SpawnProjectiles());
         SendMessage(_brokenMessage);
     }
