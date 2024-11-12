@@ -401,7 +401,7 @@ MonoBehaviour:
   _timePerZoom: 0.2
   _zoomPercent: 1.15
   _parry: {fileID: 8300000, guid: 682a55438a785414490e7cb2f966d62e, type: 3}
-  _counterDamageMultiplier: 2
+  _counterDamageMultiplier: 3
   _moveSpeed: 0.5
 --- !u!114 &3932596944697421843
 MonoBehaviour:
@@ -435,7 +435,7 @@ MonoBehaviour:
   _timePerZoom: 0.2
   _zoomPercent: 1.15
   _parry: {fileID: 8300000, guid: 682a55438a785414490e7cb2f966d62e, type: 3}
-  _counterDamageMultiplier: 2
+  _counterDamageMultiplier: 3
   _moveSpeed: 0.5
 --- !u!114 &963171509599222599
 MonoBehaviour:
@@ -469,7 +469,7 @@ MonoBehaviour:
   _timePerZoom: 0.2
   _zoomPercent: 1.15
   _parry: {fileID: 8300000, guid: 682a55438a785414490e7cb2f966d62e, type: 3}
-  _counterDamageMultiplier: 2
+  _counterDamageMultiplier: 3
   _moveSpeed: 0.5
 --- !u!114 &3057474037992505414
 MonoBehaviour:
@@ -483,11 +483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d9baeeb6fb5be44f9e01a9347600b24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerAbilities:
-  - {fileID: 11400000, guid: 8037660a8ded5214985cf06c060f67e9, type: 2}
-  - {fileID: 11400000, guid: 13608500dd2db8947a1fe4f8d008faec, type: 2}
-  - {fileID: 11400000, guid: 99fbca902aff4544ea4ee2dbb519207d, type: 2}
-  - {fileID: 11400000, guid: 82929a91a697cec4f8064c1cf5282aae, type: 2}
+  <_playerAbilities>k__BackingField: []
   _particle: {fileID: 6775379593515491725, guid: 5079d811f74ee0a4bb12c62fdac0cde3, type: 3}
 --- !u!114 &6575447850596699351
 MonoBehaviour:

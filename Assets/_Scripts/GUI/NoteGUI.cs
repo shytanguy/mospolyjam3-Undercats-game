@@ -34,6 +34,6 @@ public class NoteGUI : MonoBehaviour
     public void TurnOff()
     {
         _note.SetActive(false);
-        TimeController.ResumeTime(this);
+        TimeController.ResumeTimeNoCaller();
     }
 }

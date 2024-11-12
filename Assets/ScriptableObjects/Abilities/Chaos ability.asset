@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Chaos ability
   m_EditorClassIdentifier: 
   <Icon>k__BackingField: {fileID: 8811115329238573457, guid: 326af9eadb9e22b4e9219c8203f04b23, type: 3}
-  <Name>k__BackingField: "\u0425\u0430\u043E\u0441"
+  <Name>k__BackingField: "\u041C\u043E\u0434\u0443\u043B\u044C \u0445\u0430\u043E\u0441\u0430"
   <_color>k__BackingField: {r: 0.70486474, g: 0.20486288, b: 0.78113204, a: 1}
   <useOnceOnSpawn>k__BackingField: 1
   <cooldownTime>k__BackingField: 0

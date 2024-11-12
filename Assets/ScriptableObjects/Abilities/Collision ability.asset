@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Collision ability
   m_EditorClassIdentifier: 
   <Icon>k__BackingField: {fileID: -4264398553240656916, guid: 326af9eadb9e22b4e9219c8203f04b23, type: 3}
-  <Name>k__BackingField: Collision module
+  <Name>k__BackingField: "\u041C\u043E\u0434\u0443\u043B\u044C \u0441\u0442\u043E\u043B\u043A\u043D\u043E\u0432\u0435\u043D\u0438\u0439"
   <_color>k__BackingField: {r: 0.22813092, g: 0.623865, b: 0.6754716, a: 1}
   <useOnceOnSpawn>k__BackingField: 1
   <cooldownTime>k__BackingField: 0

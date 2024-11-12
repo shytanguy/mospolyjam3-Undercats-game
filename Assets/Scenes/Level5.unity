@@ -1931,7 +1931,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41f26650dee87f640849885e57e3a664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelName: end
+  _levelName: Ending
 --- !u!4 &1129105606
 Transform:
   m_ObjectHideFlags: 0
@@ -24709,6 +24709,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3057474037992505414, guid: fb75397e02b5f5d4a999f88c4580a07a, type: 3}
+      propertyPath: <_playerAbilities>k__BackingField.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3057474037992505414, guid: fb75397e02b5f5d4a999f88c4580a07a, type: 3}
+      propertyPath: '<_playerAbilities>k__BackingField.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 99fbca902aff4544ea4ee2dbb519207d, type: 2}
+    - target: {fileID: 3057474037992505414, guid: fb75397e02b5f5d4a999f88c4580a07a, type: 3}
+      propertyPath: '<_playerAbilities>k__BackingField.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 82929a91a697cec4f8064c1cf5282aae, type: 2}
+    - target: {fileID: 3057474037992505414, guid: fb75397e02b5f5d4a999f88c4580a07a, type: 3}
+      propertyPath: '<_playerAbilities>k__BackingField.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 13608500dd2db8947a1fe4f8d008faec, type: 2}
+    - target: {fileID: 3057474037992505414, guid: fb75397e02b5f5d4a999f88c4580a07a, type: 3}
+      propertyPath: '<_playerAbilities>k__BackingField.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 8037660a8ded5214985cf06c060f67e9, type: 2}
     - target: {fileID: 5274598505645104287, guid: fb75397e02b5f5d4a999f88c4580a07a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

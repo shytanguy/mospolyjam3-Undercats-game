@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Burn ability
   m_EditorClassIdentifier: 
   <Icon>k__BackingField: {fileID: -4062769898107646306, guid: 326af9eadb9e22b4e9219c8203f04b23, type: 3}
-  <Name>k__BackingField: temperature module
+  <Name>k__BackingField: "\u041C\u043E\u0434\u0443\u043B\u044C \u0442\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u044B"
   <_color>k__BackingField: {r: 0.82641506, g: 0.3290067, b: 0.3290067, a: 1}
   <useOnceOnSpawn>k__BackingField: 1
   <cooldownTime>k__BackingField: 0
