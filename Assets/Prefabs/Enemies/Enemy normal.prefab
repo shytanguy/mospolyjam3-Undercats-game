@@ -231,7 +231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6efbe980fcacb05488230eb39c98a23a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <_maxHealth>k__BackingField: 15
+  <_maxHealth>k__BackingField: 50
   _damageCoolDownEnabled: 0
   _invincibilityDelay: 0.5
   _damageSound: {fileID: 8300000, guid: 9cd9724df7f455b4693025dad2126433, type: 3}

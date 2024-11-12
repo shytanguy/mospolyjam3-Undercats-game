@@ -42,6 +42,7 @@ public class Transition : MonoBehaviour
 
     private IEnumerator TransitionInCoroutine(float targetAlpha)
     {
+        yield return new WaitForSeconds(0.5f);
         float alpha = _transition.color.a;
         for (float i = 0; i <= TimeTransitioning; i += Time.deltaTime)
         {

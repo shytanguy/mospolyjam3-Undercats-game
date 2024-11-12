@@ -14,7 +14,7 @@ public class LoadNextLevelWithTransition : MonoBehaviour
     private IEnumerator LoadOnTime()
     {
         Transition.instance.TransitionOut();
-        yield return new WaitForSecondsRealtime(Transition.instance.TimeTransitioning);
+        yield return new WaitForSecondsRealtime(Transition.instance.TimeTransitioning+0.5f);
         SceneManager.LoadScene(_levelName);
     }
 }
